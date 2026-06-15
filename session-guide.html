@@ -1,18 +1,921 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MCA with AI LMS — session-guide.html</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session Guide — GJIMT MCA LMS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',Arial,sans-serif;background:#f4f6fb;color:#1a1a2e}header{background:linear-gradient(135deg,#0f3460,#16213e);color:#fff;padding:18px 32px;display:flex;align-items:center;gap:16px}header h1{font-size:1.4rem;font-weight:700}header p{font-size:.82rem;opacity:.85}nav{background:#16213e;display:flex;flex-wrap:wrap;gap:4px;padding:8px 32px}nav a{color:#e0e0e0;text-decoration:none;padding:6px 14px;border-radius:4px;font-size:.85rem;transition:.2s}nav a:hover,nav a.active{background:#0f3460;color:#fff}.container{max-width:1100px;margin:28px auto;padding:0 20px}.card{background:#fff;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.08);padding:24px;margin-bottom:20px}.card h2{color:#0f3460;margin-bottom:12px;font-size:1.12rem}.card h3{color:#16213e;margin:14px 0 8px;font-size:.98rem}table{width:100%;border-collapse:collapse;font-size:.88rem}th{background:#0f3460;color:#fff;padding:9px 12px;text-align:left}td{padding:8px 12px;border-bottom:1px solid #eee;vertical-align:top}tr:hover td{background:#f0f4ff}.badge{display:inline-block;padding:2px 9px;border-radius:12px;font-size:.75rem;font-weight:600}.badge-proj{background:#e3f2fd;color:#0f3460}.badge-ai{background:#e8f5e9;color:#1b5e20}.badge-mock{background:#fff3e0;color:#e65100}.badge-doubt{background:#f3e5f5;color:#6a1b9a}.btn{display:inline-block;padding:8px 18px;background:#0f3460;color:#fff;border-radius:6px;text-decoration:none;font-size:.85rem;margin:4px 2px;border:none;cursor:pointer}.btn:hover{background:#16213e}.btn-green{background:#2e7d32}.btn-orange{background:#e65100}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}.tile{background:#f8f9ff;border:1px solid #dde3f0;border-radius:10px;padding:18px;text-decoration:none;color:inherit;display:block}.tile:hover{background:#e3f2fd;border-color:#0f3460}.tile h3{color:#0f3460;margin-bottom:6px}.hint{font-size:.8rem;color:#666;margin-top:6px}ul,ol{padding-left:20px;margin:8px 0}li{margin:4px 0;font-size:.9rem;line-height:1.45}.phase-box{border-left:4px solid #0f3460;padding:10px 14px;margin:8px 0;background:#f8f9ff;border-radius:0 6px 6px 0}.phase-box.ai{border-color:#2e7d32;background:#f1f8f1}.phase-box.manual{border-color:#e65100;background:#fff8f0}.layout{display:flex;min-height:80vh}.sidebar{width:235px;min-width:235px;background:#16213e;padding:16px;position:sticky;top:0;height:100vh;overflow-y:auto;flex-shrink:0}.sidebar p,.sidebar p.label{color:#aaa;font-size:.73rem;text-transform:uppercase;margin-bottom:8px;letter-spacing:.5px}.sidebar a{display:block;padding:8px 12px;text-decoration:none;color:#e0e0e0;font-size:.82rem;border-radius:4px;margin:2px 0;transition:.15s}.sidebar a:hover{background:#0f3460;color:#fff}.main-content{flex:1;padding:20px;overflow-y:auto}.hour-label{display:inline-block;background:#0f3460;color:#fff;padding:3px 10px;border-radius:20px;font-size:.78rem;font-weight:700;white-space:nowrap}.week-header{background:linear-gradient(135deg,#0f3460,#16213e);color:#fff;padding:14px 20px;border-radius:8px;margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}.week-header h3{font-size:1rem;color:#fff}.week-header .wk-meta{font-size:.8rem;opacity:.85}.step-list{list-style:none;padding:0;margin:0}.step-list li{padding:5px 0 5px 18px;position:relative;font-size:.88rem;color:#333;line-height:1.5}.step-list li::before{content:'›';position:absolute;left:0;color:#0f3460;font-weight:700}.activity-block{border-left:3px solid #0f3460;padding:8px 12px;margin:6px 0;background:#f8f9ff;border-radius:0 6px 6px 0;font-size:.87rem}.activity-block.student-block{border-color:#2e7d32;background:#f1f8f1}.activity-block.shared-block{border-color:#e65100;background:#fff8f0}.activity-title{font-weight:600;color:#0f3460;font-size:.82rem;margin-bottom:4px}.student-block .activity-title{color:#2e7d32}.shared-block .activity-title{color:#e65100}.note{background:#fff8e1;border:1px solid #ffe082;border-radius:8px;padding:12px;margin-top:12px;font-size:.86rem;color:#6d4c00}.q-block{background:#f8f9ff;border-radius:8px;padding:14px;margin-bottom:14px;border:1px solid #dde3f0}.q-block p{font-weight:600;margin-bottom:8px}.q-block label{display:block;margin:4px 0;cursor:pointer;font-size:.9rem}.scenario-box{background:#fff8e1;border:1px solid #ffe082;border-radius:8px;padding:14px;margin-bottom:14px}textarea{width:100%;border:1px solid #ccc;border-radius:6px;padding:8px;font-size:.88rem;resize:vertical}.result-box{display:none;padding:12px;border-radius:6px;margin-top:10px;font-weight:600}.pass{background:#e8f5e9;color:#2e7d32;display:block}.fail{background:#ffebee;color:#c62828;display:block}.lock-card{border-left:4px solid #e65100;background:#fff8f0}.admin-only,.student-only,#certPracticeArea{display:none}footer{text-align:center;padding:18px;font-size:.8rem;color:#888;margin-top:30px}
-#lms-login-overlay{display:none;position:fixed;inset:0;background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 60%,#0f172a 100%);z-index:99999;align-items:center;justify-content:center;font-family:'Segoe UI',sans-serif}#lms-login-overlay.active{display:flex}.lms-login-box{background:#fff;border-radius:18px;padding:40px 36px;width:360px;box-shadow:0 20px 60px rgba(0,0,0,.5);text-align:center}.lms-login-box .lms-logo{font-size:2rem;margin-bottom:4px}.lms-login-box h2{font-size:1.25rem;color:#0f172a;margin:0 0 4px}.lms-login-box .lms-subtitle{font-size:.78rem;color:#64748b;margin-bottom:24px}.lms-login-box input{width:100%;box-sizing:border-box;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:8px;font-size:.95rem;margin-bottom:12px;outline:none;transition:border .2s}.lms-login-box input:focus{border-color:#3b82f6}.lms-login-box button{width:100%;padding:12px;background:#3b82f6;color:#fff;border:none;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;margin-top:4px}.lms-login-box button:hover{background:#2563eb}#lms-login-error{color:#ef4444;font-size:.82rem;margin-top:8px;min-height:18px}.lms-login-box .lms-hint{font-size:.73rem;color:#94a3b8;margin-top:14px;line-height:1.5}.lms-page-content{display:none}.lms-page-content.unlocked{display:block}.lms-logout-btn{position:fixed;top:12px;right:16px;z-index:9999;background:#ef4444;color:#fff;border:none;border-radius:6px;padding:6px 14px;font-size:.8rem;cursor:pointer;font-weight:600}.lms-welcome-bar{background:#0f172a;color:#94a3b8;font-size:.78rem;text-align:center;padding:5px;letter-spacing:.5px}@media(max-width:768px){.layout{flex-direction:column}.sidebar{width:100%;height:auto;position:relative}header,nav{padding-left:18px;padding-right:18px}.container{padding:0 14px}}
-</style></head><body>
-<div id="lms-login-overlay" class="active"><div class="lms-login-box"><div class="lms-logo">🎓</div><h2>GJIMT MCA LMS</h2><div class="lms-subtitle">MCA with AI Integration · 2026<br>Please sign in to continue</div><input type="text" id="lms-uid" placeholder="User ID" autocomplete="username"><input type="password" id="lms-pwd" placeholder="Password" autocomplete="current-password" onkeydown="if(event.key==='Enter')lmsDoLogin()"><button onclick="lmsDoLogin()">Sign In →</button><div id="lms-login-error"></div><div class="lms-hint">Students: <b>mca26-ai-01</b> … <b>mca26-ai-10</b><br>Faculty: <b>mca26-fac-manvir</b> | Admin: <b>mca26-admin</b></div></div></div>
-<button class="lms-logout-btn" id="lms-logout-btn" style="display:none" onclick="lmsLogout()">⏻ Sign Out</button><div id="lms-welcome-bar" class="lms-welcome-bar" style="display:none"></div><div id="lms-page-content" class="lms-page-content">
-<header><div><h1>GJIMT AI Lab — MCA Sem 1 LMS</h1><p>MCA with AI Integration · 42-Hour Program · 3 Shadow Projects · Sem 2 Certification Planning · Batch of 10</p></div></header><nav><a href="index.html" class="">🏠 Home</a><a href="calendar.html" class="">📅 42-Hour Calendar</a><a href="projects.html" class="">📁 Shadow Projects</a><a href="session-guide.html" class="active">🗂️ Session Guide</a><a href="mock.html" class="">🔒 Certification (Sem 2)</a><a href="faculty.html" class="">👩‍🏫 Faculty Dashboard</a><a href="upload-guide.html" class="">📤 Upload Guide</a></nav><div class="layout"><div class="sidebar"><p class="label">Weekly Sessions</p><a href="#wk1">Week 1 — P1 Phase 1</a><a href="#wk2">Week 2 — P1 Phase 2</a><a href="#wk3">Week 3 — P1 Phase 3</a><a href="#wk4">Week 4 — P1 Phase 4 + Viva</a><a href="#wk5">Week 5 — P2 Phase 1</a><a href="#wk6">Week 6 — P2 Phase 2</a><a href="#wk7">Week 7 — P2 Phase 3</a><a href="#wk8">Week 8 — P2 Phase 4 + Viva</a><a href="#wk9">Week 9 — P3 Phase 1</a><a href="#wk10">Week 10 — P3 Phase 2</a><a href="#wk11">Week 11 — P3 Phase 3</a><a href="#wk12">Week 12 — P3 Phase 4 + Viva</a><a href="#wk13">Week 13 — Portfolio Review</a><a href="#wk14">Week 14 — Final Viva</a><br><p class="label">Links</p><a href="calendar.html">📅 Full Calendar</a><a href="projects.html">📁 Projects</a><a href="upload-guide.html">📤 Upload Guide</a></div><div class="main-content"><div class="card"><h2>🗂️ Weekly Session Guide — Hour-by-Hour Plan</h2><div class="note"><strong>Important:</strong> MCA Semester 1 has <strong>no certification/mock-test component for students</strong>. This guide is built around exactly <strong>3 Shadow Projects</strong>: P1 Weeks 1–4, P2 Weeks 5–8, P3 Weeks 9–12.</div></div><div id="wk1" class="card"><div class="week-header"><h3>📅 Week 1 — P1 Phase 1</h3><span class="wk-meta">3 Hours · MCA Sem 1</span></div><table><tr><th style="width:150px">Time Block</th><th>Faculty Action</th><th>Student Activity</th></tr><tr><td><span class="hour-label">Hr 1 · 0:00–1:00</span></td><td><div class="activity-block"><div class="activity-title">🎙️ Concept + Demo</div><ul class="step-list"><li>Algorithm problem selection, baseline logic and environment setup</li><li>Show one industry benchmark example and required file format.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">✏️ Student Task</div><ul class="step-list"><li>Select problem, create folder, run baseline code</li><li>Update personal project folder and notes.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 2 · 1:00–2:00</span></td><td><div class="activity-block"><div class="activity-title">💻 Guided Lab Demo</div><ul class="step-list"><li>Demonstrate coding / analysis / AI validation workflow.</li></ul></div><div class="activity-block"><div class="activity-title">🧑‍🏫 Faculty Support</div><ul class="step-list"><li>Check progress, correct errors and guide ethical AI usage.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">🛠️ Hands-on Lab Work</div><ul class="step-list"><li>Complete weekly lab task and capture screenshots / outputs.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 3 · 2:00–3:00</span></td><td><div class="activity-block"><div class="activity-title">✅ Review + Upload Checkpoint</div><ul class="step-list"><li>Review files and explain next-week preparation. No certification/mock activity for MCA Sem 1 students.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">📤 Submission + Reflection</div><ul class="step-list"><li>Upload weekly evidence and write short reflection.</li></ul></div><div class="activity-block shared-block"><div class="activity-title">💬 Doubt Session</div><ul class="step-list"><li>Ask doubts and note viva questions.</li></ul></div></td></tr></table></div><div id="wk2" class="card"><div class="week-header"><h3>📅 Week 2 — P1 Phase 2</h3><span class="wk-meta">3 Hours · MCA Sem 1</span></div><table><tr><th style="width:150px">Time Block</th><th>Faculty Action</th><th>Student Activity</th></tr><tr><td><span class="hour-label">Hr 1 · 0:00–1:00</span></td><td><div class="activity-block"><div class="activity-title">🎙️ Concept + Demo</div><ul class="step-list"><li>Time and space complexity fundamentals</li><li>Show one industry benchmark example and required file format.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">✏️ Student Task</div><ul class="step-list"><li>Prepare complexity notes and dry run table</li><li>Update personal project folder and notes.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 2 · 1:00–2:00</span></td><td><div class="activity-block"><div class="activity-title">💻 Guided Lab Demo</div><ul class="step-list"><li>Demonstrate coding / analysis / AI validation workflow.</li></ul></div><div class="activity-block"><div class="activity-title">🧑‍🏫 Faculty Support</div><ul class="step-list"><li>Check progress, correct errors and guide ethical AI usage.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">🛠️ Hands-on Lab Work</div><ul class="step-list"><li>Complete weekly lab task and capture screenshots / outputs.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 3 · 2:00–3:00</span></td><td><div class="activity-block"><div class="activity-title">✅ Review + Upload Checkpoint</div><ul class="step-list"><li>Review files and explain next-week preparation. No certification/mock activity for MCA Sem 1 students.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">📤 Submission + Reflection</div><ul class="step-list"><li>Upload weekly evidence and write short reflection.</li></ul></div><div class="activity-block shared-block"><div class="activity-title">💬 Doubt Session</div><ul class="step-list"><li>Ask doubts and note viva questions.</li></ul></div></td></tr></table></div><div id="wk3" class="card"><div class="week-header"><h3>📅 Week 3 — P1 Phase 3</h3><span class="wk-meta">3 Hours · MCA Sem 1</span></div><table><tr><th style="width:150px">Time Block</th><th>Faculty Action</th><th>Student Activity</th></tr><tr><td><span class="hour-label">Hr 1 · 0:00–1:00</span></td><td><div class="activity-block"><div class="activity-title">🎙️ Concept + Demo</div><ul class="step-list"><li>AI-supported refactoring and alternative algorithms</li><li>Show one industry benchmark example and required file format.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">✏️ Student Task</div><ul class="step-list"><li>Compare two approaches with Copilot/ChatGPT support</li><li>Update personal project folder and notes.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 2 · 1:00–2:00</span></td><td><div class="activity-block"><div class="activity-title">💻 Guided Lab Demo</div><ul class="step-list"><li>Demonstrate coding / analysis / AI validation workflow.</li></ul></div><div class="activity-block"><div class="activity-title">🧑‍🏫 Faculty Support</div><ul class="step-list"><li>Check progress, correct errors and guide ethical AI usage.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">🛠️ Hands-on Lab Work</div><ul class="step-list"><li>Complete weekly lab task and capture screenshots / outputs.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 3 · 2:00–3:00</span></td><td><div class="activity-block"><div class="activity-title">✅ Review + Upload Checkpoint</div><ul class="step-list"><li>Review files and explain next-week preparation. No certification/mock activity for MCA Sem 1 students.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">📤 Submission + Reflection</div><ul class="step-list"><li>Upload weekly evidence and write short reflection.</li></ul></div><div class="activity-block shared-block"><div class="activity-title">💬 Doubt Session</div><ul class="step-list"><li>Ask doubts and note viva questions.</li></ul></div></td></tr></table></div><div id="wk4" class="card"><div class="week-header"><h3>📅 Week 4 — P1 Phase 4 + Viva</h3><span class="wk-meta">3 Hours · MCA Sem 1</span></div><table><tr><th style="width:150px">Time Block</th><th>Faculty Action</th><th>Student Activity</th></tr><tr><td><span class="hour-label">Hr 1 · 0:00–1:00</span></td><td><div class="activity-block"><div class="activity-title">🎙️ Concept + Demo</div><ul class="step-list"><li>Final complexity table, report and viva</li><li>Show one industry benchmark example and required file format.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">✏️ Student Task</div><ul class="step-list"><li>Submit P1 portfolio</li><li>Update personal project folder and notes.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 2 · 1:00–2:00</span></td><td><div class="activity-block"><div class="activity-title">💻 Guided Lab Demo</div><ul class="step-list"><li>Demonstrate coding / analysis / AI validation workflow.</li></ul></div><div class="activity-block"><div class="activity-title">🧑‍🏫 Faculty Support</div><ul class="step-list"><li>Check progress, correct errors and guide ethical AI usage.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">🛠️ Hands-on Lab Work</div><ul class="step-list"><li>Complete weekly lab task and capture screenshots / outputs.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 3 · 2:00–3:00</span></td><td><div class="activity-block"><div class="activity-title">✅ Review + Upload Checkpoint</div><ul class="step-list"><li>Review files and explain next-week preparation. No certification/mock activity for MCA Sem 1 students.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">📤 Submission + Reflection</div><ul class="step-list"><li>Upload weekly evidence and write short reflection.</li></ul></div><div class="activity-block shared-block"><div class="activity-title">💬 Doubt Session</div><ul class="step-list"><li>Ask doubts and note viva questions.</li></ul></div></td></tr></table></div><div id="wk5" class="card"><div class="week-header"><h3>📅 Week 5 — P2 Phase 1</h3><span class="wk-meta">3 Hours · MCA Sem 1</span></div><table><tr><th style="width:150px">Time Block</th><th>Faculty Action</th><th>Student Activity</th></tr><tr><td><span class="hour-label">Hr 1 · 0:00–1:00</span></td><td><div class="activity-block"><div class="activity-title">🎙️ Concept + Demo</div><ul class="step-list"><li>Utility idea selection and requirement specification</li><li>Show one industry benchmark example and required file format.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">✏️ Student Task</div><ul class="step-list"><li>Choose file handler/process monitor and write requirements</li><li>Update personal project folder and notes.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 2 · 1:00–2:00</span></td><td><div class="activity-block"><div class="activity-title">💻 Guided Lab Demo</div><ul class="step-list"><li>Demonstrate coding / analysis / AI validation workflow.</li></ul></div><div class="activity-block"><div class="activity-title">🧑‍🏫 Faculty Support</div><ul class="step-list"><li>Check progress, correct errors and guide ethical AI usage.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">🛠️ Hands-on Lab Work</div><ul class="step-list"><li>Complete weekly lab task and capture screenshots / outputs.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 3 · 2:00–3:00</span></td><td><div class="activity-block"><div class="activity-title">✅ Review + Upload Checkpoint</div><ul class="step-list"><li>Review files and explain next-week preparation. No certification/mock activity for MCA Sem 1 students.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">📤 Submission + Reflection</div><ul class="step-list"><li>Upload weekly evidence and write short reflection.</li></ul></div><div class="activity-block shared-block"><div class="activity-title">💬 Doubt Session</div><ul class="step-list"><li>Ask doubts and note viva questions.</li></ul></div></td></tr></table></div><div id="wk6" class="card"><div class="week-header"><h3>📅 Week 6 — P2 Phase 2</h3><span class="wk-meta">3 Hours · MCA Sem 1</span></div><table><tr><th style="width:150px">Time Block</th><th>Faculty Action</th><th>Student Activity</th></tr><tr><td><span class="hour-label">Hr 1 · 0:00–1:00</span></td><td><div class="activity-block"><div class="activity-title">🎙️ Concept + Demo</div><ul class="step-list"><li>Core coding and modular design</li><li>Show one industry benchmark example and required file format.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">✏️ Student Task</div><ul class="step-list"><li>Develop functions and test basic operations</li><li>Update personal project folder and notes.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 2 · 1:00–2:00</span></td><td><div class="activity-block"><div class="activity-title">💻 Guided Lab Demo</div><ul class="step-list"><li>Demonstrate coding / analysis / AI validation workflow.</li></ul></div><div class="activity-block"><div class="activity-title">🧑‍🏫 Faculty Support</div><ul class="step-list"><li>Check progress, correct errors and guide ethical AI usage.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">🛠️ Hands-on Lab Work</div><ul class="step-list"><li>Complete weekly lab task and capture screenshots / outputs.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 3 · 2:00–3:00</span></td><td><div class="activity-block"><div class="activity-title">✅ Review + Upload Checkpoint</div><ul class="step-list"><li>Review files and explain next-week preparation. No certification/mock activity for MCA Sem 1 students.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">📤 Submission + Reflection</div><ul class="step-list"><li>Upload weekly evidence and write short reflection.</li></ul></div><div class="activity-block shared-block"><div class="activity-title">💬 Doubt Session</div><ul class="step-list"><li>Ask doubts and note viva questions.</li></ul></div></td></tr></table></div><div id="wk7" class="card"><div class="week-header"><h3>📅 Week 7 — P2 Phase 3</h3><span class="wk-meta">3 Hours · MCA Sem 1</span></div><table><tr><th style="width:150px">Time Block</th><th>Faculty Action</th><th>Student Activity</th></tr><tr><td><span class="hour-label">Hr 1 · 0:00–1:00</span></td><td><div class="activity-block"><div class="activity-title">🎙️ Concept + Demo</div><ul class="step-list"><li>Testing, validation and error handling</li><li>Show one industry benchmark example and required file format.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">✏️ Student Task</div><ul class="step-list"><li>Prepare test cases and screenshots</li><li>Update personal project folder and notes.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 2 · 1:00–2:00</span></td><td><div class="activity-block"><div class="activity-title">💻 Guided Lab Demo</div><ul class="step-list"><li>Demonstrate coding / analysis / AI validation workflow.</li></ul></div><div class="activity-block"><div class="activity-title">🧑‍🏫 Faculty Support</div><ul class="step-list"><li>Check progress, correct errors and guide ethical AI usage.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">🛠️ Hands-on Lab Work</div><ul class="step-list"><li>Complete weekly lab task and capture screenshots / outputs.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 3 · 2:00–3:00</span></td><td><div class="activity-block"><div class="activity-title">✅ Review + Upload Checkpoint</div><ul class="step-list"><li>Review files and explain next-week preparation. No certification/mock activity for MCA Sem 1 students.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">📤 Submission + Reflection</div><ul class="step-list"><li>Upload weekly evidence and write short reflection.</li></ul></div><div class="activity-block shared-block"><div class="activity-title">💬 Doubt Session</div><ul class="step-list"><li>Ask doubts and note viva questions.</li></ul></div></td></tr></table></div><div id="wk8" class="card"><div class="week-header"><h3>📅 Week 8 — P2 Phase 4 + Viva</h3><span class="wk-meta">3 Hours · MCA Sem 1</span></div><table><tr><th style="width:150px">Time Block</th><th>Faculty Action</th><th>Student Activity</th></tr><tr><td><span class="hour-label">Hr 1 · 0:00–1:00</span></td><td><div class="activity-block"><div class="activity-title">🎙️ Concept + Demo</div><ul class="step-list"><li>Documentation using Notion AI and final demo</li><li>Show one industry benchmark example and required file format.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">✏️ Student Task</div><ul class="step-list"><li>Submit P2 portfolio</li><li>Update personal project folder and notes.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 2 · 1:00–2:00</span></td><td><div class="activity-block"><div class="activity-title">💻 Guided Lab Demo</div><ul class="step-list"><li>Demonstrate coding / analysis / AI validation workflow.</li></ul></div><div class="activity-block"><div class="activity-title">🧑‍🏫 Faculty Support</div><ul class="step-list"><li>Check progress, correct errors and guide ethical AI usage.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">🛠️ Hands-on Lab Work</div><ul class="step-list"><li>Complete weekly lab task and capture screenshots / outputs.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 3 · 2:00–3:00</span></td><td><div class="activity-block"><div class="activity-title">✅ Review + Upload Checkpoint</div><ul class="step-list"><li>Review files and explain next-week preparation. No certification/mock activity for MCA Sem 1 students.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">📤 Submission + Reflection</div><ul class="step-list"><li>Upload weekly evidence and write short reflection.</li></ul></div><div class="activity-block shared-block"><div class="activity-title">💬 Doubt Session</div><ul class="step-list"><li>Ask doubts and note viva questions.</li></ul></div></td></tr></table></div><div id="wk9" class="card"><div class="week-header"><h3>📅 Week 9 — P3 Phase 1</h3><span class="wk-meta">3 Hours · MCA Sem 1</span></div><table><tr><th style="width:150px">Time Block</th><th>Faculty Action</th><th>Student Activity</th></tr><tr><td><span class="hour-label">Hr 1 · 0:00–1:00</span></td><td><div class="activity-block"><div class="activity-title">🎙️ Concept + Demo</div><ul class="step-list"><li>Stack, queue and linked-list scenario mapping</li><li>Show one industry benchmark example and required file format.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">✏️ Student Task</div><ul class="step-list"><li>Select real-use scenarios and define operations</li><li>Update personal project folder and notes.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 2 · 1:00–2:00</span></td><td><div class="activity-block"><div class="activity-title">💻 Guided Lab Demo</div><ul class="step-list"><li>Demonstrate coding / analysis / AI validation workflow.</li></ul></div><div class="activity-block"><div class="activity-title">🧑‍🏫 Faculty Support</div><ul class="step-list"><li>Check progress, correct errors and guide ethical AI usage.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">🛠️ Hands-on Lab Work</div><ul class="step-list"><li>Complete weekly lab task and capture screenshots / outputs.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 3 · 2:00–3:00</span></td><td><div class="activity-block"><div class="activity-title">✅ Review + Upload Checkpoint</div><ul class="step-list"><li>Review files and explain next-week preparation. No certification/mock activity for MCA Sem 1 students.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">📤 Submission + Reflection</div><ul class="step-list"><li>Upload weekly evidence and write short reflection.</li></ul></div><div class="activity-block shared-block"><div class="activity-title">💬 Doubt Session</div><ul class="step-list"><li>Ask doubts and note viva questions.</li></ul></div></td></tr></table></div><div id="wk10" class="card"><div class="week-header"><h3>📅 Week 10 — P3 Phase 2</h3><span class="wk-meta">3 Hours · MCA Sem 1</span></div><table><tr><th style="width:150px">Time Block</th><th>Faculty Action</th><th>Student Activity</th></tr><tr><td><span class="hour-label">Hr 1 · 0:00–1:00</span></td><td><div class="activity-block"><div class="activity-title">🎙️ Concept + Demo</div><ul class="step-list"><li>Implementation and operation counting</li><li>Show one industry benchmark example and required file format.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">✏️ Student Task</div><ul class="step-list"><li>Run operations and record performance data</li><li>Update personal project folder and notes.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 2 · 1:00–2:00</span></td><td><div class="activity-block"><div class="activity-title">💻 Guided Lab Demo</div><ul class="step-list"><li>Demonstrate coding / analysis / AI validation workflow.</li></ul></div><div class="activity-block"><div class="activity-title">🧑‍🏫 Faculty Support</div><ul class="step-list"><li>Check progress, correct errors and guide ethical AI usage.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">🛠️ Hands-on Lab Work</div><ul class="step-list"><li>Complete weekly lab task and capture screenshots / outputs.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 3 · 2:00–3:00</span></td><td><div class="activity-block"><div class="activity-title">✅ Review + Upload Checkpoint</div><ul class="step-list"><li>Review files and explain next-week preparation. No certification/mock activity for MCA Sem 1 students.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">📤 Submission + Reflection</div><ul class="step-list"><li>Upload weekly evidence and write short reflection.</li></ul></div><div class="activity-block shared-block"><div class="activity-title">💬 Doubt Session</div><ul class="step-list"><li>Ask doubts and note viva questions.</li></ul></div></td></tr></table></div><div id="wk11" class="card"><div class="week-header"><h3>📅 Week 11 — P3 Phase 3</h3><span class="wk-meta">3 Hours · MCA Sem 1</span></div><table><tr><th style="width:150px">Time Block</th><th>Faculty Action</th><th>Student Activity</th></tr><tr><td><span class="hour-label">Hr 1 · 0:00–1:00</span></td><td><div class="activity-block"><div class="activity-title">🎙️ Concept + Demo</div><ul class="step-list"><li>Excel AI performance tables and charts</li><li>Show one industry benchmark example and required file format.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">✏️ Student Task</div><ul class="step-list"><li>Create charts and interpret performance</li><li>Update personal project folder and notes.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 2 · 1:00–2:00</span></td><td><div class="activity-block"><div class="activity-title">💻 Guided Lab Demo</div><ul class="step-list"><li>Demonstrate coding / analysis / AI validation workflow.</li></ul></div><div class="activity-block"><div class="activity-title">🧑‍🏫 Faculty Support</div><ul class="step-list"><li>Check progress, correct errors and guide ethical AI usage.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">🛠️ Hands-on Lab Work</div><ul class="step-list"><li>Complete weekly lab task and capture screenshots / outputs.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 3 · 2:00–3:00</span></td><td><div class="activity-block"><div class="activity-title">✅ Review + Upload Checkpoint</div><ul class="step-list"><li>Review files and explain next-week preparation. No certification/mock activity for MCA Sem 1 students.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">📤 Submission + Reflection</div><ul class="step-list"><li>Upload weekly evidence and write short reflection.</li></ul></div><div class="activity-block shared-block"><div class="activity-title">💬 Doubt Session</div><ul class="step-list"><li>Ask doubts and note viva questions.</li></ul></div></td></tr></table></div><div id="wk12" class="card"><div class="week-header"><h3>📅 Week 12 — P3 Phase 4 + Viva</h3><span class="wk-meta">3 Hours · MCA Sem 1</span></div><table><tr><th style="width:150px">Time Block</th><th>Faculty Action</th><th>Student Activity</th></tr><tr><td><span class="hour-label">Hr 1 · 0:00–1:00</span></td><td><div class="activity-block"><div class="activity-title">🎙️ Concept + Demo</div><ul class="step-list"><li>Final data structure evaluation report</li><li>Show one industry benchmark example and required file format.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">✏️ Student Task</div><ul class="step-list"><li>Submit P3 portfolio</li><li>Update personal project folder and notes.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 2 · 1:00–2:00</span></td><td><div class="activity-block"><div class="activity-title">💻 Guided Lab Demo</div><ul class="step-list"><li>Demonstrate coding / analysis / AI validation workflow.</li></ul></div><div class="activity-block"><div class="activity-title">🧑‍🏫 Faculty Support</div><ul class="step-list"><li>Check progress, correct errors and guide ethical AI usage.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">🛠️ Hands-on Lab Work</div><ul class="step-list"><li>Complete weekly lab task and capture screenshots / outputs.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 3 · 2:00–3:00</span></td><td><div class="activity-block"><div class="activity-title">✅ Review + Upload Checkpoint</div><ul class="step-list"><li>Review files and explain next-week preparation. No certification/mock activity for MCA Sem 1 students.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">📤 Submission + Reflection</div><ul class="step-list"><li>Upload weekly evidence and write short reflection.</li></ul></div><div class="activity-block shared-block"><div class="activity-title">💬 Doubt Session</div><ul class="step-list"><li>Ask doubts and note viva questions.</li></ul></div></td></tr></table></div><div id="wk13" class="card"><div class="week-header"><h3>📅 Week 13 — Portfolio Review</h3><span class="wk-meta">3 Hours · MCA Sem 1</span></div><table><tr><th style="width:150px">Time Block</th><th>Faculty Action</th><th>Student Activity</th></tr><tr><td><span class="hour-label">Hr 1 · 0:00–1:00</span></td><td><div class="activity-block"><div class="activity-title">🎙️ Concept + Demo</div><ul class="step-list"><li>Consolidated review of P1, P2 and P3</li><li>Show one industry benchmark example and required file format.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">✏️ Student Task</div><ul class="step-list"><li>Correct files and prepare final folder</li><li>Update personal project folder and notes.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 2 · 1:00–2:00</span></td><td><div class="activity-block"><div class="activity-title">💻 Guided Lab Demo</div><ul class="step-list"><li>Demonstrate coding / analysis / AI validation workflow.</li></ul></div><div class="activity-block"><div class="activity-title">🧑‍🏫 Faculty Support</div><ul class="step-list"><li>Check progress, correct errors and guide ethical AI usage.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">🛠️ Hands-on Lab Work</div><ul class="step-list"><li>Complete weekly lab task and capture screenshots / outputs.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 3 · 2:00–3:00</span></td><td><div class="activity-block"><div class="activity-title">✅ Review + Upload Checkpoint</div><ul class="step-list"><li>Review files and explain next-week preparation. No certification/mock activity for MCA Sem 1 students.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">📤 Submission + Reflection</div><ul class="step-list"><li>Upload weekly evidence and write short reflection.</li></ul></div><div class="activity-block shared-block"><div class="activity-title">💬 Doubt Session</div><ul class="step-list"><li>Ask doubts and note viva questions.</li></ul></div></td></tr></table></div><div id="wk14" class="card"><div class="week-header"><h3>📅 Week 14 — Final Viva</h3><span class="wk-meta">3 Hours · MCA Sem 1</span></div><table><tr><th style="width:150px">Time Block</th><th>Faculty Action</th><th>Student Activity</th></tr><tr><td><span class="hour-label">Hr 1 · 0:00–1:00</span></td><td><div class="activity-block"><div class="activity-title">🎙️ Concept + Demo</div><ul class="step-list"><li>Integrated viva and presentation</li><li>Show one industry benchmark example and required file format.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">✏️ Student Task</div><ul class="step-list"><li>Final demonstration and reflection</li><li>Update personal project folder and notes.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 2 · 1:00–2:00</span></td><td><div class="activity-block"><div class="activity-title">💻 Guided Lab Demo</div><ul class="step-list"><li>Demonstrate coding / analysis / AI validation workflow.</li></ul></div><div class="activity-block"><div class="activity-title">🧑‍🏫 Faculty Support</div><ul class="step-list"><li>Check progress, correct errors and guide ethical AI usage.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">🛠️ Hands-on Lab Work</div><ul class="step-list"><li>Complete weekly lab task and capture screenshots / outputs.</li></ul></div></td></tr><tr><td><span class="hour-label">Hr 3 · 2:00–3:00</span></td><td><div class="activity-block"><div class="activity-title">✅ Review + Upload Checkpoint</div><ul class="step-list"><li>Review files and explain next-week preparation. No certification/mock activity for MCA Sem 1 students.</li></ul></div></td><td><div class="activity-block student-block"><div class="activity-title">📤 Submission + Reflection</div><ul class="step-list"><li>Upload weekly evidence and write short reflection.</li></ul></div><div class="activity-block shared-block"><div class="activity-title">💬 Doubt Session</div><ul class="step-list"><li>Ask doubts and note viva questions.</li></ul></div></td></tr></table></div></div></div><footer>© 2026 GJIMT AI Lab · MCA AI Integrated Program · Powered by GitHub Pages</footer></div>
-<script>
-const LMS_USERS={};for(let i=1;i<=10;i++){let id='mca26-ai-'+String(i).padStart(2,'0');LMS_USERS[id]={name:'MCA AI Student '+i,role:'Student',pwd:'mca@2026'}}
-LMS_USERS['mca26-fac-manvir']={name:'Manvir',role:'Faculty',pwd:'faculty@2026'};LMS_USERS['mca26-admin']={name:'Admin',role:'Admin',pwd:'admin@2026'};
-function lmsDoLogin(){const uid=document.getElementById('lms-uid').value.trim().toLowerCase();const pwd=document.getElementById('lms-pwd').value;const err=document.getElementById('lms-login-error');if(LMS_USERS[uid]&&LMS_USERS[uid].pwd===pwd){localStorage.setItem('mca_lms_user',uid);lmsUnlock()}else{err.textContent='Invalid User ID or Password'}}
-function lmsUnlock(){const uid=localStorage.getItem('mca_lms_user');if(!uid||!LMS_USERS[uid])return;document.getElementById('lms-login-overlay').classList.remove('active');document.getElementById('lms-page-content').classList.add('unlocked');document.getElementById('lms-logout-btn').style.display='block';const u=LMS_USERS[uid];document.getElementById('lms-welcome-bar').style.display='block';document.getElementById('lms-welcome-bar').textContent='Signed in as '+u.name+' · '+u.role+' | MCA AI Integrated Program 2026';if(typeof pageAccessControl==='function')pageAccessControl(uid,u.role)}
-function lmsLogout(){localStorage.removeItem('mca_lms_user');location.reload()}
-window.addEventListener('DOMContentLoaded',lmsUnlock);
-function gradeMock(prefix,total){let key={m1:['B','B','C','A','B'],m2:['B','C','A','B','C'],m3:['A','B','C','B','A'],full:['B','A','C','B','D']};let ans=key[prefix]||[];let score=0;for(let i=1;i<=total;i++){let checked=document.querySelector('input[name="'+prefix+'_q'+i+'"]:checked');if(checked&&checked.value===ans[i-1])score++}let box=document.getElementById(prefix+'_result');if(box){box.className='result-box '+(score>=Math.ceil(total*.7)?'pass':'fail');box.textContent='Score: '+score+'/'+total+' — '+(score>=Math.ceil(total*.7)?'Pass':'Revise and retry');}}
+  :root {
+    --bg: #0f1117;
+    --surface: #191c25;
+    --surface2: #21253a;
+    --border: #2a2e42;
+    --accent: #4f8ef7;
+    --accent2: #7c3aed;
+    --green: #22c55e;
+    --orange: #f97316;
+    --teal: #14b8a6;
+    --text: #e2e8f0;
+    --muted: #8892a4;
+    --card-shadow: 0 4px 24px rgba(0,0,0,0.4);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-</script></body></html>
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* ── Top bar ─────────────────────────────────── */
+  .topbar {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .topbar-logo { display: flex; align-items: center; gap: 8px; }
+  .topbar-logo span { font-family: 'Space Mono', monospace; color: var(--accent); font-weight: 700; font-size: 0.95rem; }
+  .sign-in-btn {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 14px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  .sign-in-btn:hover { background: #3a7de4; }
+
+  /* ── Nav ─────────────────────────────────────── */
+  nav {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    overflow-x: auto;
+  }
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+    padding: 14px 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  nav a:hover { color: var(--text); }
+  nav a.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+  /* ── Hero ─────────────────────────────────────── */
+  .hero {
+    background: linear-gradient(135deg, #12162a 0%, #1a1040 50%, #0f1117 100%);
+    padding: 40px 24px 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 60% 40%, rgba(79,142,247,0.12) 0%, transparent 65%),
+                radial-gradient(ellipse at 20% 80%, rgba(124,58,237,0.10) 0%, transparent 55%);
+    pointer-events: none;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(79,142,247,0.15);
+    border: 1px solid rgba(79,142,247,0.35);
+    color: var(--accent);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    letter-spacing: 0.05em;
+  }
+  .hero h1 { font-size: clamp(1.4rem, 4vw, 2.2rem); font-weight: 700; color: #fff; margin-bottom: 8px; }
+  .hero p { color: var(--muted); font-size: 0.9rem; max-width: 560px; margin: 0 auto; }
+
+  /* ── Week jump links ──────────────────────────── */
+  .week-jumps {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+  }
+  .week-jumps span { font-size: 0.75rem; color: var(--muted); margin-right: 6px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+  .week-jumps a {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    transition: color 0.2s, border-color 0.2s;
+    font-family: 'Space Mono', monospace;
+  }
+  .week-jumps a:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* ── Legend ───────────────────────────────────── */
+  .legend {
+    max-width: 960px;
+    margin: 24px auto 0;
+    padding: 0 24px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+  }
+  .legend-item { display: flex; align-items: center; gap: 7px; color: var(--muted); }
+  .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+  /* ── Main ─────────────────────────────────────── */
+  main { max-width: 960px; margin: 0 auto; padding: 28px 24px 64px; }
+
+  /* ── Week Card ────────────────────────────────── */
+  .week-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    margin-bottom: 28px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    scroll-margin-top: 80px;
+  }
+  .week-header {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.15s;
+  }
+  .week-header:hover { background: rgba(255,255,255,0.02); }
+  .week-num {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    background: rgba(79,142,247,0.15);
+    border: 1px solid rgba(79,142,247,0.3);
+    color: var(--accent);
+    padding: 3px 10px;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+  .week-title { font-size: 1rem; font-weight: 700; color: #fff; flex: 1; }
+  .week-meta { font-size: 0.78rem; color: var(--muted); white-space: nowrap; }
+  .week-toggle { color: var(--muted); font-size: 0.75rem; transition: transform 0.2s; flex-shrink: 0; }
+  .week-card.open .week-toggle { transform: rotate(180deg); }
+
+  .week-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+  .week-card.open .week-body { max-height: 4000px; }
+
+  /* ── Hour block ───────────────────────────────── */
+  .hour-block {
+    border-top: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 110px 1fr 1fr;
+    gap: 0;
+  }
+  @media (max-width: 640px) {
+    .hour-block { grid-template-columns: 1fr; }
+    .hour-label { border-right: none; border-bottom: 1px solid var(--border); }
+  }
+
+  .hour-label {
+    padding: 16px 14px;
+    border-right: 1px solid var(--border);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--accent);
+    font-weight: 700;
+    background: rgba(79,142,247,0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+  }
+  .hour-label .time-range { color: var(--muted); font-weight: 400; font-size: 0.67rem; }
+
+  .col-faculty, .col-student {
+    padding: 16px 18px;
+    font-size: 0.85rem;
+  }
+  .col-faculty { border-right: 1px solid var(--border); background: rgba(59,130,246,0.03); }
+  .col-student { background: rgba(34,197,94,0.03); }
+
+  .col-head {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .col-head.faculty { color: #60a5fa; }
+  .col-head.student { color: #4ade80; }
+
+  .col-faculty ul, .col-student ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .col-faculty ul li, .col-student ul li {
+    padding-left: 14px;
+    position: relative;
+    color: var(--text);
+    font-size: 0.84rem;
+    line-height: 1.5;
+  }
+  .col-faculty ul li::before { content: '→'; position: absolute; left: 0; color: #60a5fa; font-size: 0.75rem; top: 2px; }
+  .col-student ul li::before { content: '→'; position: absolute; left: 0; color: #4ade80; font-size: 0.75rem; top: 2px; }
+
+  /* Sub-section inside hour (e.g. GSDC block) */
+  .sub-block {
+    margin-top: 12px;
+    padding: 10px 12px;
+    background: rgba(124,58,237,0.08);
+    border: 1px solid rgba(124,58,237,0.2);
+    border-radius: 7px;
+  }
+  .sub-block-head {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #a78bfa;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 7px;
+  }
+  .sub-block ul li::before { color: #a78bfa !important; }
+
+  /* Deliverable pill */
+  .deliverable-row {
+    border-top: 1px solid var(--border);
+    padding: 10px 24px;
+    background: rgba(79,142,247,0.05);
+    font-size: 0.82rem;
+    color: #93c5fd;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .deliverable-row strong { color: #bfdbfe; flex-shrink: 0; }
+
+  /* Full-session block */
+  .full-session {
+    border-top: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 110px 1fr 1fr;
+    gap: 0;
+  }
+  @media (max-width: 640px) { .full-session { grid-template-columns: 1fr; } }
+
+  /* ── Footer ───────────────────────────────────── */
+  footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--muted);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="topbar-logo">
+    <span>🎓 GJIMT MCA LMS</span>
+    <span style="color:var(--border)">|</span>
+    <span>AI Integrated Program · 2026</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:12px;font-size:0.8rem;">
+    <span>Students: <strong style="color:var(--text)">mca26-ai-01 … mca26-ai-10</strong></span>
+    <span>Faculty: <strong style="color:var(--text)">mca26-fac</strong></span>
+    <button class="sign-in-btn">Sign In →</button>
+  </div>
+</div>
+
+<!-- Nav -->
+<nav>
+  <a href="#">🏠 Home</a>
+  <a href="#">📅 6-Week Calendar</a>
+  <a href="mca_projects.html">📁 Shadow Projects</a>
+  <a href="#" class="active">🗂️ Session Guide</a>
+  <a href="#">📝 Viva Prep</a>
+  <a href="#">👩‍🏫 Faculty Dashboard</a>
+  <a href="#">🔑 User Accounts</a>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-badge">GJIMT MCA · AI Integration · Sem 1 · Shadow Project 1</div>
+  <h1>🗂️ Weekly Session Guide</h1>
+  <p>Hour-by-hour plan for all 6 weeks of the Mini Google Search Engine project. Every session is a 3-hour contact class.</p>
+</div>
+
+<!-- Week jump links -->
+<div class="week-jumps">
+  <span>Jump to →</span>
+  <a href="#wk1">Wk 1 — URL Planning</a>
+  <a href="#wk2">Wk 2 — Web Crawling</a>
+  <a href="#wk3">Wk 3 — Baseline Engine</a>
+  <a href="#wk4">Wk 4 — AI Ranking</a>
+  <a href="#wk5">Wk 5 — Testing</a>
+  <a href="#wk6">Wk 6 — Viva &amp; Demo</a>
+</div>
+
+<!-- Legend -->
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#60a5fa"></div> Faculty Action / Demo</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#4ade80"></div> Student Activity</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#a78bfa"></div> AI Tools / GSDC Block</div>
+</div>
+
+<main>
+
+  <!-- ══════════════════════════════════════════════
+       WEEK 1
+  ══════════════════════════════════════════════ -->
+  <div class="week-card open" id="wk1">
+    <div class="week-header" onclick="toggleWeek('wk1')">
+      <span class="week-num">WK 1</span>
+      <span class="week-title">URL Planning — Building the Index of 100 Real Websites</span>
+      <span class="week-meta">3 hours · No code yet</span>
+      <span class="week-toggle">▼</span>
+    </div>
+    <div class="week-body">
+
+      <!-- Hr 1 -->
+      <div class="hour-block">
+        <div class="hour-label">Hr 1<span class="time-range">0:00–1:00</span></div>
+        <div class="col-faculty">
+          <div class="col-head faculty">🎙️ Faculty — Lecture + Setup</div>
+          <ul>
+            <li>Introduce the Mini Google Search Engine project — show a working demo of the final output (real search results with clickable URLs)</li>
+            <li>Explain the 6-week timeline and all 8 deliverables students will produce</li>
+            <li>Explain what a search engine needs before it can search anything: a defined set of pages (the index)</li>
+            <li>Distribute theme assignment list — each student gets one topic (10 themes, 1 per student): Education &amp; AI, Mohali &amp; Punjab, Technology &amp; Coding, Careers &amp; Business, Lifestyle &amp; Health, Food, Sports, Travel, Science, Arts &amp; Culture</li>
+            <li>Show the LMS projects page — walk through P1 deliverables checklist</li>
+          </ul>
+        </div>
+        <div class="col-student">
+          <div class="col-head student">✏️ Student — Listen + Note</div>
+          <ul>
+            <li>Note assigned theme in personal notebook</li>
+            <li>Open LMS on laptop — navigate to Shadow Projects → P1</li>
+            <li>Write down: what is your theme, what kind of websites will you search for, name 3 example websites you already know</li>
+            <li>Open Notion — create AI diary document using the template shared by faculty</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hr 2 -->
+      <div class="hour-block">
+        <div class="hour-label">Hr 2<span class="time-range">1:00–2:00</span></div>
+        <div class="col-faculty">
+          <div class="col-head faculty">🔍 Faculty — URL Quality Demo</div>
+          <ul>
+            <li>Show what makes a URL suitable for indexing: publicly accessible, text-rich, in English, not behind login</li>
+            <li>Live demo: open Wikipedia, GeeksForGeeks, and a blocked site — explain the difference</li>
+            <li>Show how to use ChatGPT / Gemini to suggest URLs by topic — demonstrate prompt: "Give me 10 real Wikipedia URLs about [theme] suitable for a student search engine project"</li>
+            <li>Emphasise: every URL must be manually verified in the browser before adding to the list</li>
+            <li>Show the url-list.txt format: one URL per line, plain text file</li>
+          </ul>
+        </div>
+        <div class="col-student">
+          <div class="col-head student">🔍 Student — URL Collection</div>
+          <ul>
+            <li>Open ChatGPT or Gemini — use the faculty prompt adapted for your theme</li>
+            <li>Manually open every suggested URL in the browser — verify it loads, has text content, is in English</li>
+            <li>Begin building your 10 URLs — paste verified URLs into a text file</li>
+            <li>Log your ChatGPT / Gemini interaction in the Notion AI diary: Tool used, Prompt, Response summary, How you used it</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hr 3 -->
+      <div class="hour-block">
+        <div class="hour-label">Hr 3<span class="time-range">2:00–3:00</span></div>
+        <div class="col-faculty">
+          <div class="col-head faculty">✅ Faculty — Review + Approval</div>
+          <ul>
+            <li>Call each student — review their URL list progress</li>
+            <li>Check: are URLs publicly accessible? Are they text-rich? Are they thematically appropriate?</li>
+            <li>Reject any URLs that are paywalled, image-only, or irrelevant</li>
+            <li>Combine all 10 students' lists — show how 100 URLs are assembled into one url-list.txt</li>
+            <li>Share the approved combined url-list.txt with all students via WhatsApp/LMS before end of session</li>
+          </ul>
+          <div class="sub-block">
+            <div class="sub-block-head">🤖 AI Tool Check</div>
+            <ul>
+              <li>Verify students logged their ChatGPT/Gemini interaction in Notion diary</li>
+              <li>Confirm Notion AI diary template is set up correctly for all 6 weeks</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-student">
+          <div class="col-head student">📋 Student — Finalise List</div>
+          <ul>
+            <li>Finalise your 10 URLs — incorporate faculty feedback</li>
+            <li>Save as url-list.txt in your project folder</li>
+            <li>Verify the Notion AI diary has at least 1 entry logged from today</li>
+            <li>No code written yet — Week 1 is entirely planning and data curation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="deliverable-row">
+        <strong>📄 Week 1 Deliverable:</strong>
+        url-list.txt — 100 real URLs, one per line, faculty-approved. Notion AI diary started with minimum 1 entry.
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       WEEK 2
+  ══════════════════════════════════════════════ -->
+  <div class="week-card" id="wk2">
+    <div class="week-header" onclick="toggleWeek('wk2')">
+      <span class="week-num">WK 2</span>
+      <span class="week-title">Web Crawling — Collecting Data from Real Websites</span>
+      <span class="week-meta">3 hours · Python · requests · BeautifulSoup</span>
+      <span class="week-toggle">▼</span>
+    </div>
+    <div class="week-body">
+
+      <!-- Hr 1 -->
+      <div class="hour-block">
+        <div class="hour-label">Hr 1<span class="time-range">0:00–1:00</span></div>
+        <div class="col-faculty">
+          <div class="col-head faculty">🎙️ Faculty — Crawler Concept</div>
+          <ul>
+            <li>Explain what a web crawler is — analogy: Googlebot visits billions of pages; students build a mini version for 100 pages</li>
+            <li>Show the step-by-step flow on projector: url-list.txt → requests.get() → HTML received → BeautifulSoup → extract title/keywords/content → write row to metadata.csv → wait 1.5 seconds → next URL</li>
+            <li>Explain HTTP requests: what happens when your browser visits a webpage vs what requests.get() does</li>
+            <li>Show raw HTML of a Wikipedia page — then show what BeautifulSoup extracts from it (just 3 values from thousands of lines)</li>
+            <li>Explain why HTML files are NOT saved to disk — URL in metadata.csv links directly to live site</li>
+          </ul>
+        </div>
+        <div class="col-student">
+          <div class="col-head student">✏️ Student — Understand First</div>
+          <ul>
+            <li>Open a Wikipedia page in browser — right-click → View Page Source — see raw HTML</li>
+            <li>Identify in the HTML: where is the title tag? Where is the meta keywords tag? Where is the body text?</li>
+            <li>Write in notebook: what 3 pieces of data will the crawler extract from each page, and why?</li>
+            <li>Install libraries if not already done: pip install requests beautifulsoup4</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hr 2 -->
+      <div class="hour-block">
+        <div class="hour-label">Hr 2<span class="time-range">1:00–2:00</span></div>
+        <div class="col-faculty">
+          <div class="col-head faculty">💻 Faculty — Live Crawler Build</div>
+          <ul>
+            <li>Open VS Code on projector — build crawler.py live, explaining every line as it is typed</li>
+            <li>Walk through: open url-list.txt → loop over URLs → requests.get() with User-Agent header → BeautifulSoup parsing → extract title, keywords, content → csv.writer → time.sleep(1.5)</li>
+            <li>Explain the User-Agent header — why some sites (like GeeksForGeeks) return 403 without it</li>
+            <li>Run the crawler live on 5 URLs — show metadata.csv being built row by row</li>
+            <li>Show how to handle exceptions: try/except around requests.get() so one failed URL does not stop the whole crawl</li>
+          </ul>
+        </div>
+        <div class="col-student">
+          <div class="col-head student">💻 Student — Write Your Crawler</div>
+          <ul>
+            <li>Open VS Code — create crawler.py in your project folder</li>
+            <li>Type every line yourself — do not copy-paste from projector</li>
+            <li>Run crawler on your own url-list.txt — watch metadata.csv being created</li>
+            <li>If you get a 403 error: ask faculty or use ChatGPT to understand why — then fix it yourself</li>
+            <li>Log any ChatGPT/Gemini interaction used for debugging in your Notion diary</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hr 3 -->
+      <div class="hour-block">
+        <div class="hour-label">Hr 3<span class="time-range">2:00–3:00</span></div>
+        <div class="col-faculty">
+          <div class="col-head faculty">🧑‍🏫 Faculty — Debug Support + CSV Review</div>
+          <ul>
+            <li>Circulate — help students fix crawler errors (403 blocks, encoding errors, missing metadata tags)</li>
+            <li>Show on projector: open metadata.csv in Excel — check column quality, look for blank titles or missing content</li>
+            <li>Demonstrate manual popularity scoring: open CSV in Excel, add popularity column, explain score range 30–90 based on how well-known each page is</li>
+            <li>Confirm: every student has a complete metadata.csv with 100 rows before end of session</li>
+          </ul>
+        </div>
+        <div class="col-student">
+          <div class="col-head student">📊 Student — Review + Score</div>
+          <ul>
+            <li>Open your metadata.csv in Excel — check all 100 rows are present</li>
+            <li>Scan for blank titles or missing content — fix by re-running crawler on those URLs</li>
+            <li>Manually assign popularity score (30–90) for each page: 90 = Wikipedia main articles, 60 = well-known sites, 30 = lesser-known pages</li>
+            <li>Save final metadata.csv — this is the complete database for all remaining weeks</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="deliverable-row">
+        <strong>📄 Week 2 Deliverable:</strong>
+        crawler.py — working web crawler. metadata.csv — 100 rows with title, url, category, keywords, content, popularity, updated columns. No other data files needed.
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       WEEK 3
+  ══════════════════════════════════════════════ -->
+  <div class="week-card" id="wk3">
+    <div class="week-header" onclick="toggleWeek('wk3')">
+      <span class="week-num">WK 3</span>
+      <span class="week-title">Baseline Search Engine — Student-Written From Scratch</span>
+      <span class="week-meta">3 hours · Most important week · Zero AI code generation</span>
+      <span class="week-toggle">▼</span>
+    </div>
+    <div class="week-body">
+
+      <!-- Hr 1 -->
+      <div class="hour-block">
+        <div class="hour-label">Hr 1<span class="time-range">0:00–1:00</span></div>
+        <div class="col-faculty">
+          <div class="col-head faculty">🎙️ Faculty — Search Engine Concept</div>
+          <ul>
+            <li>Explain how a search engine works using the librarian analogy: query comes in → scan every book card → score by relevance → return top 5</li>
+            <li>Explain the scoring formula on whiteboard: Title match = +10 points, Keywords match = +5 points, Content match = +2 points, Popularity ÷ 10 = bonus</li>
+            <li>Walk through a worked example: search "python programming" — show how 3 pages score differently and why the Python Wikipedia page wins</li>
+            <li>Introduce the 5 functions students will write: load_pages(), tokenise_query(), contains_ignore_case(), score_page(), print_results()</li>
+            <li>State the Golden Rule clearly: every line of search_engine.py must be typed by the student — no copy-paste from AI, no "write this function for me"</li>
+          </ul>
+        </div>
+        <div class="col-student">
+          <div class="col-head student">✏️ Student — Plan Before Coding</div>
+          <ul>
+            <li>On paper: draw the flow of search_engine.py before writing any code — what does the program do step by step?</li>
+            <li>Write out the scoring formula in your notebook with the worked example from the whiteboard</li>
+            <li>Name the 5 functions you will write and what each one does</li>
+            <li>Open VS Code — create search_engine.py in your project folder</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hr 2 -->
+      <div class="hour-block">
+        <div class="hour-label">Hr 2<span class="time-range">1:00–2:00</span></div>
+        <div class="col-faculty">
+          <div class="col-head faculty">💻 Faculty — Live Code Walk (Explain Only)</div>
+          <ul>
+            <li>Explain load_pages() concept — how csv.DictReader reads metadata.csv into a list of dictionaries</li>
+            <li>Explain tokenise_query() — how str.split() turns "python programming" into ['python', 'programming']</li>
+            <li>Explain contains_ignore_case() — why str.lower() is needed for case-insensitive matching</li>
+            <li>Explain score_page() — the loop structure, conditionals for title/keywords/content, arithmetic for popularity bonus</li>
+            <li>Explain print_results() — how sorted() with reverse=True orders by highest score first, how f-strings format the output</li>
+            <li>Do NOT write the code on projector — explain concepts only; students write their own version</li>
+          </ul>
+        </div>
+        <div class="col-student">
+          <div class="col-head student">💻 Student — Write Every Line</div>
+          <ul>
+            <li>Write load_pages() — read metadata.csv, return a list of page dictionaries</li>
+            <li>Write tokenise_query() — split query string into a list of lowercase words</li>
+            <li>Write contains_ignore_case() — return True if a word appears in text, ignoring case</li>
+            <li>Write score_page() — calculate relevance score for one page against all query words</li>
+            <li>Write print_results() — display top 5 results sorted by score with URL, category, popularity</li>
+            <li>AI permitted for explanation only: "Explain what csv.DictReader does" — not "write this function for me"</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hr 3 -->
+      <div class="hour-block">
+        <div class="hour-label">Hr 3<span class="time-range">2:00–3:00</span></div>
+        <div class="col-faculty">
+          <div class="col-head faculty">🧑‍🏫 Faculty — Live Testing + Viva Prep</div>
+          <ul>
+            <li>Ask each student to run their search engine live on the projector with one query</li>
+            <li>Check: does the output show 5 results? Do scores look correct? Are real URLs displayed?</li>
+            <li>Ask 2 spot-check questions per student: "What does score_page() do?" and "Why do you use str.lower()?"</li>
+            <li>Identify students who cannot explain their code — note for follow-up; they must re-write without AI assistance</li>
+          </ul>
+          <div class="sub-block">
+            <div class="sub-block-head">⚠️ Golden Rule Reminder</div>
+            <ul>
+              <li>If a student cannot explain any function line by line, their score for Week 3 is zero — re-submission required</li>
+              <li>Code was written by the student's hands — the viva will prove it</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-student">
+          <div class="col-head student">🧪 Student — Test + Explain</div>
+          <ul>
+            <li>Run search_engine.py with at least 3 different queries — check results make sense</li>
+            <li>Test edge cases: what happens with a query that matches nothing? What if the query has one word?</li>
+            <li>Practise explaining score_page() out loud — you will be asked in the viva</li>
+            <li>Log any AI interactions used today in your Notion diary</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="deliverable-row">
+        <strong>📄 Week 3 Deliverable:</strong>
+        search_engine.py — working baseline search engine that reads metadata.csv, accepts a query, scores 100 real pages, and displays top 5 results with real URLs. Student can explain every single line.
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       WEEK 4
+  ══════════════════════════════════════════════ -->
+  <div class="week-card" id="wk4">
+    <div class="week-header" onclick="toggleWeek('wk4')">
+      <span class="week-num">WK 4</span>
+      <span class="week-title">AI-Augmented Ranking — 4 Smarter Ranking Methods</span>
+      <span class="week-meta">3 hours · GitHub Copilot introduced (refactoring only)</span>
+      <span class="week-toggle">▼</span>
+    </div>
+    <div class="week-body">
+
+      <!-- Hr 1 -->
+      <div class="hour-block">
+        <div class="hour-label">Hr 1<span class="time-range">0:00–1:00</span></div>
+        <div class="col-faculty">
+          <div class="col-head faculty">🎙️ Faculty — Why Improve Ranking?</div>
+          <ul>
+            <li>Explain why the baseline is limited: treats all pages the same regardless of source quality or recency — real search engines do not</li>
+            <li>Introduce the 5 ranking methods on projector: Weighted Field Ranker, Popularity-Aware Ranker, Keyword Count Ranker, Freshness-Aware Ranker, Domain Trust Ranker</li>
+            <li>Assign one method to each team (2 students per team)</li>
+            <li>Introduce GitHub Copilot — show what it does and what it does NOT do in this project</li>
+            <li>Demonstrate Copilot suggesting a better variable name and adding a docstring — show reviewing and accepting the suggestion</li>
+            <li>State clearly: Copilot does not write ranking logic — students write the logic, Copilot helps clean it up</li>
+          </ul>
+        </div>
+        <div class="col-student">
+          <div class="col-head student">📋 Student — Understand Your Method</div>
+          <ul>
+            <li>Read the description of your assigned ranking method — understand what changes versus the baseline</li>
+            <li>Write in notebook: what is the one thing your method does differently, and what kind of query will it improve?</li>
+            <li>Copy search_engine.py → rename as search_engine_v2.py — this is where your improvement goes</li>
+            <li>Open GitHub Copilot in VS Code — try suggesting a docstring for one function from Week 3</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hr 2 -->
+      <div class="hour-block">
+        <div class="hour-label">Hr 2<span class="time-range">1:00–2:00</span></div>
+        <div class="col-faculty">
+          <div class="col-head faculty">🤖 Faculty — Ranking Method Guidance</div>
+          <ul>
+            <li>Circulate — help each team implement their ranking method</li>
+            <li>Team 1 (Weighted Field Ranker): guide on multiplying title score by 1.5</li>
+            <li>Team 2 (Popularity-Aware): guide on changing popularity ÷ 10 to popularity ÷ 5</li>
+            <li>Team 3 (Keyword Count): guide on using count() instead of in operator for term frequency</li>
+            <li>Team 4 (Freshness-Aware): guide on parsing the updated column date and adding +5 bonus for pages updated within 90 days</li>
+            <li>Team 5 (Domain Trust): guide on checking if "wikipedia.org" or "geeksforgeeks.org" appears in the URL string</li>
+          </ul>
+        </div>
+        <div class="col-student">
+          <div class="col-head student">💻 Student — Implement + Refactor</div>
+          <ul>
+            <li>Implement your ranking method in search_engine_v2.py — write the logic yourself</li>
+            <li>Use Copilot only for: renaming variables, adding docstrings, splitting long functions — not for writing the ranking logic</li>
+            <li>Every Copilot suggestion: accept or reject — document the decision in prompts-log.md with a reason</li>
+            <li>Run v2 with 3 queries — compare output to v1 (baseline) for the same queries</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hr 3 -->
+      <div class="hour-block">
+        <div class="hour-label">Hr 3<span class="time-range">2:00–3:00</span></div>
+        <div class="col-faculty">
+          <div class="col-head faculty">🗣️ Faculty — Team Sharing Round</div>
+          <ul>
+            <li>Each team presents their method to the class in 5 minutes: what changed, what query it helps, one live demo</li>
+            <li>Class discussion: which method seems most promising and why?</li>
+            <li>Remind students: next week they will test all 5 methods with 6 standard queries and record evidence</li>
+          </ul>
+        </div>
+        <div class="col-student">
+          <div class="col-head student">🗣️ Student — Present Your Method</div>
+          <ul>
+            <li>Present your team's method to the class — 5 minutes maximum</li>
+            <li>Run one live query on the projector showing the v2 result vs v1 result</li>
+            <li>Update prompts-log.md with all Copilot interactions from today</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="deliverable-row">
+        <strong>📄 Week 4 Deliverable:</strong>
+        search_engine_v2.py — 5 ranking methods (baseline + 4 improvements). Student can explain what changed in each method and why. prompts-log.md updated with all Copilot interactions.
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       WEEK 5
+  ══════════════════════════════════════════════ -->
+  <div class="week-card" id="wk5">
+    <div class="week-header" onclick="toggleWeek('wk5')">
+      <span class="week-num">WK 5</span>
+      <span class="week-title">Testing &amp; Comparison — Evidence-Based Evaluation</span>
+      <span class="week-meta">3 hours · 6 standard queries · comparison-table.xlsx</span>
+      <span class="week-toggle">▼</span>
+    </div>
+    <div class="week-body">
+
+      <!-- Hr 1 -->
+      <div class="hour-block">
+        <div class="hour-label">Hr 1<span class="time-range">0:00–1:00</span></div>
+        <div class="col-faculty">
+          <div class="col-head faculty">🎙️ Faculty — Why Test?</div>
+          <ul>
+            <li>Explain: in industry, no algorithm is deployed without evidence — Week 5 teaches students that better code requires data, not guesswork</li>
+            <li>Introduce the 6 standard test queries (same for all students): python programming language · machine learning artificial intelligence · punjab tourism chandigarh · data structures algorithms · career internship jobs india · cricket india sports</li>
+            <li>Share the comparison-table.xlsx template — show the 4 columns to fill: Relevance (1–5), Speed (ms), Readability (1–5), Scalability</li>
+            <li>Demonstrate how to measure speed using time.perf_counter() — run it live on projector</li>
+            <li>Explain relevance rating: do the top 5 results make sense for the query? Rate honestly 1–5</li>
+          </ul>
+        </div>
+        <div class="col-student">
+          <div class="col-head student">📋 Student — Set Up Test Sheet</div>
+          <ul>
+            <li>Open comparison-table.xlsx template from LMS</li>
+            <li>Add time.perf_counter() to your search_engine_v2.py to measure speed per query</li>
+            <li>Write down the 6 standard queries in your notebook — you will run each query on all 5 methods</li>
+            <li>Plan: 5 methods × 6 queries = 30 tests to run this session</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hr 2 -->
+      <div class="hour-block">
+        <div class="hour-label">Hr 2<span class="time-range">1:00–2:00</span></div>
+        <div class="col-faculty">
+          <div class="col-head faculty">🧑‍🏫 Faculty — Guided Testing Round</div>
+          <ul>
+            <li>Circulate — ensure students are running all 6 queries on all 5 methods (not skipping)</li>
+            <li>Spot-check: ask one student to justify their relevance rating — does the reasoning make sense?</li>
+            <li>Flag if any student has all relevance scores as 5 — require them to re-test and rate more critically</li>
+            <li>Introduce peer readability review: swap code with a classmate, rate the ranking code readability 1–5</li>
+          </ul>
+        </div>
+        <div class="col-student">
+          <div class="col-head student">🧪 Student — Run All 30 Tests</div>
+          <ul>
+            <li>Run all 6 queries on all 5 ranking methods — record results in comparison-table.xlsx</li>
+            <li>For each test: note the top 5 results, rate relevance 1–5, record speed in ms</li>
+            <li>Swap code with a classmate — rate their ranking method's readability 1–5 and explain your rating</li>
+            <li>Assess scalability conceptually: would this method still work with 10,000 pages? Write one sentence per method</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hr 3 -->
+      <div class="hour-block">
+        <div class="hour-label">Hr 3<span class="time-range">2:00–3:00</span></div>
+        <div class="col-faculty">
+          <div class="col-head faculty">📊 Faculty — Analysis Discussion</div>
+          <ul>
+            <li>Show class results on projector: which method scored highest for relevance across the 6 queries?</li>
+            <li>Discuss as a class: does speed matter for 100 pages? What about 10,000 pages?</li>
+            <li>Introduce inverted index concept: explain why real search engines do not loop through every page per query</li>
+            <li>Ask each student: "Which method would you deploy in a real product and why?" — students write their answer</li>
+          </ul>
+        </div>
+        <div class="col-student">
+          <div class="col-head student">✍️ Student — Form Your Opinion</div>
+          <ul>
+            <li>Complete comparison-table.xlsx with all 30 test results and peer readability scores</li>
+            <li>Write a 100-word conclusion in the notes section: which method works best, which is most readable, which would scale best and why</li>
+            <li>Save final comparison-table.xlsx — this is a graded deliverable</li>
+            <li>Update Notion AI diary if any AI tools were used today</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="deliverable-row">
+        <strong>📄 Week 5 Deliverable:</strong>
+        comparison-table.xlsx — side-by-side results for all 5 methods across 6 standard queries. Relevance, speed, readability, and scalability filled with real data — no guesses. Written conclusion included.
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       WEEK 6
+  ══════════════════════════════════════════════ -->
+  <div class="week-card" id="wk6">
+    <div class="week-header" onclick="toggleWeek('wk6')">
+      <span class="week-num">WK 6</span>
+      <span class="week-title">Report, Viva &amp; Live Demonstration</span>
+      <span class="week-meta">3 hours · Final submission · 15-mark viva</span>
+      <span class="week-toggle">▼</span>
+    </div>
+    <div class="week-body">
+
+      <!-- Full session -->
+      <div class="full-session">
+        <div class="hour-label" style="padding:16px 14px;">Full Session<span class="time-range">0:00–3:00</span></div>
+        <div class="col-faculty">
+          <div class="col-head faculty">🎤 Faculty — Viva Conduct</div>
+          <ul>
+            <li>Call students one by one — each viva is approximately 15 minutes: 5-minute live demo + 10 minutes of questions</li>
+            <li>During demo: student runs search engine in terminal, types 2 queries live, shows results with real URLs</li>
+            <li>Ask 5–8 questions per student — drawn from the viva question bank below</li>
+            <li>Score on rubric: Web Crawler (2 marks) · Baseline Engine (3 marks) · Improved Ranking (3 marks) · Comparison Table (3 marks) · AI Log (2 marks) · Viva &amp; Demo (2 marks) = 15 marks total</li>
+            <li>Use remaining time for group debrief — share top 3 technical insights from class</li>
+          </ul>
+          <div class="sub-block">
+            <div class="sub-block-head">🔍 Viva Question Bank</div>
+            <ul>
+              <li>What does your crawler do? Explain requests.get(), BeautifulSoup, time.sleep().</li>
+              <li>Why do you not save the HTML files to disk?</li>
+              <li>How does your score_page() function work? Walk me through the scoring formula.</li>
+              <li>What was the difference between your baseline and your improved method? Give specific numbers from your tests.</li>
+              <li>What would happen with 10,000 pages instead of 100? What is an inverted index?</li>
+              <li>Which AI tools did you use and what exactly for? Show me a specific entry from your prompts-log.md.</li>
+              <li>What does BeautifulSoup do? Explain find() and get_text().</li>
+              <li>Why do we need metadata.csv? What would happen without it?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-student">
+          <div class="col-head student">🖥️ Student — Present + Defend</div>
+          <ul>
+            <li>Submit all project files via Google Form before the session begins — link shared by faculty on WhatsApp</li>
+            <li>Submit: url-list.txt, crawler.py, metadata.csv, search_engine.py, search_engine_v2.py, prompts-log.md, comparison-table.xlsx, report.md — zipped in one folder</li>
+            <li>Bring laptop with search engine ready to run in terminal</li>
+            <li>Demo flow: open terminal → run search_engine_v2.py → type "python programming" → show top 5 results → type a second query of faculty's choice</li>
+            <li>Answer viva questions — be specific, not generic: say "I used ChatGPT in Week 2 to understand why my GeeksForGeeks URL returned 403" not just "I used ChatGPT to help"</li>
+            <li>After your viva: watch peers present and write 1 peer observation note</li>
+          </ul>
+          <div class="sub-block">
+            <div class="sub-block-head">📋 Final Submission Checklist</div>
+            <ul>
+              <li>✅ url-list.txt — 100 URLs, one per line</li>
+              <li>✅ crawler.py — fetches and extracts from real websites</li>
+              <li>✅ metadata.csv — 100 rows, all columns filled</li>
+              <li>✅ search_engine.py — baseline, student-written</li>
+              <li>✅ search_engine_v2.py — 5 ranking methods</li>
+              <li>✅ prompts-log.md — minimum 15 logged AI interactions</li>
+              <li>✅ comparison-table.xlsx — 30 real test results</li>
+              <li>✅ report.md — 8–10 pages</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="deliverable-row">
+        <strong>📄 Week 6 Final Submission:</strong>
+        Complete project ZIP · report.md (8–10 pages) · live demo in terminal · viva (15 min per student) · 15-mark rubric score.
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  © 2026 GJIMT AI Lab · MCA AI Integrated Program · Session Guide v1.0 · Faculty prepared
+</footer>
+
+<script>
+  function toggleWeek(id) {
+    document.getElementById(id).classList.toggle('open');
+  }
+</script>
+</body>
+</html>
