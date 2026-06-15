@@ -1,18 +1,623 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Shadow Projects — GJIMT MCA LMS</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shadow Projects — GJIMT MCA LMS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',Arial,sans-serif;background:#f4f6fb;color:#1a1a2e}header{background:linear-gradient(135deg,#0f3460,#16213e);color:#fff;padding:18px 32px;display:flex;align-items:center;gap:16px}header h1{font-size:1.4rem;font-weight:700}header p{font-size:.82rem;opacity:.85}nav{background:#16213e;display:flex;flex-wrap:wrap;gap:4px;padding:8px 32px}nav a{color:#e0e0e0;text-decoration:none;padding:6px 14px;border-radius:4px;font-size:.85rem;transition:.2s}nav a:hover,nav a.active{background:#0f3460;color:#fff}.container{max-width:1100px;margin:28px auto;padding:0 20px}.card{background:#fff;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.08);padding:24px;margin-bottom:20px}.card h2{color:#0f3460;margin-bottom:12px;font-size:1.12rem}.card h3{color:#16213e;margin:14px 0 8px;font-size:.98rem}table{width:100%;border-collapse:collapse;font-size:.88rem}th{background:#0f3460;color:#fff;padding:9px 12px;text-align:left}td{padding:8px 12px;border-bottom:1px solid #eee;vertical-align:top}tr:hover td{background:#f0f4ff}.badge{display:inline-block;padding:2px 9px;border-radius:12px;font-size:.75rem;font-weight:600}.badge-proj{background:#e3f2fd;color:#0f3460}.badge-ai{background:#e8f5e9;color:#1b5e20}.badge-mock{background:#fff3e0;color:#e65100}.badge-doubt{background:#f3e5f5;color:#6a1b9a}.btn{display:inline-block;padding:8px 18px;background:#0f3460;color:#fff;border-radius:6px;text-decoration:none;font-size:.85rem;margin:4px 2px;border:none;cursor:pointer}.btn:hover{background:#16213e}.btn-green{background:#2e7d32}.btn-orange{background:#e65100}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}.tile{background:#f8f9ff;border:1px solid #dde3f0;border-radius:10px;padding:18px;text-decoration:none;color:inherit;display:block}.tile:hover{background:#e3f2fd;border-color:#0f3460}.tile h3{color:#0f3460;margin-bottom:6px}.hint{font-size:.8rem;color:#666;margin-top:6px}ul,ol{padding-left:20px;margin:8px 0}li{margin:4px 0;font-size:.9rem;line-height:1.45}.phase-box{border-left:4px solid #0f3460;padding:10px 14px;margin:8px 0;background:#f8f9ff;border-radius:0 6px 6px 0}.phase-box.ai{border-color:#2e7d32;background:#f1f8f1}.phase-box.manual{border-color:#e65100;background:#fff8f0}.layout{display:flex;min-height:80vh}.sidebar{width:235px;min-width:235px;background:#16213e;padding:16px;position:sticky;top:0;height:100vh;overflow-y:auto;flex-shrink:0}.sidebar p,.sidebar p.label{color:#aaa;font-size:.73rem;text-transform:uppercase;margin-bottom:8px;letter-spacing:.5px}.sidebar a{display:block;padding:8px 12px;text-decoration:none;color:#e0e0e0;font-size:.82rem;border-radius:4px;margin:2px 0;transition:.15s}.sidebar a:hover{background:#0f3460;color:#fff}.main-content{flex:1;padding:20px;overflow-y:auto}.hour-label{display:inline-block;background:#0f3460;color:#fff;padding:3px 10px;border-radius:20px;font-size:.78rem;font-weight:700;white-space:nowrap}.week-header{background:linear-gradient(135deg,#0f3460,#16213e);color:#fff;padding:14px 20px;border-radius:8px;margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}.week-header h3{font-size:1rem;color:#fff}.week-header .wk-meta{font-size:.8rem;opacity:.85}.step-list{list-style:none;padding:0;margin:0}.step-list li{padding:5px 0 5px 18px;position:relative;font-size:.88rem;color:#333;line-height:1.5}.step-list li::before{content:'›';position:absolute;left:0;color:#0f3460;font-weight:700}.activity-block{border-left:3px solid #0f3460;padding:8px 12px;margin:6px 0;background:#f8f9ff;border-radius:0 6px 6px 0;font-size:.87rem}.activity-block.student-block{border-color:#2e7d32;background:#f1f8f1}.activity-block.shared-block{border-color:#e65100;background:#fff8f0}.activity-title{font-weight:600;color:#0f3460;font-size:.82rem;margin-bottom:4px}.student-block .activity-title{color:#2e7d32}.shared-block .activity-title{color:#e65100}.note{background:#fff8e1;border:1px solid #ffe082;border-radius:8px;padding:12px;margin-top:12px;font-size:.86rem;color:#6d4c00}.q-block{background:#f8f9ff;border-radius:8px;padding:14px;margin-bottom:14px;border:1px solid #dde3f0}.q-block p{font-weight:600;margin-bottom:8px}.q-block label{display:block;margin:4px 0;cursor:pointer;font-size:.9rem}.scenario-box{background:#fff8e1;border:1px solid #ffe082;border-radius:8px;padding:14px;margin-bottom:14px}textarea{width:100%;border:1px solid #ccc;border-radius:6px;padding:8px;font-size:.88rem;resize:vertical}.result-box{display:none;padding:12px;border-radius:6px;margin-top:10px;font-weight:600}.pass{background:#e8f5e9;color:#2e7d32;display:block}.fail{background:#ffebee;color:#c62828;display:block}.lock-card{border-left:4px solid #e65100;background:#fff8f0}.admin-only,.student-only,#certPracticeArea{display:none}footer{text-align:center;padding:18px;font-size:.8rem;color:#888;margin-top:30px}
-#lms-login-overlay{display:none;position:fixed;inset:0;background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 60%,#0f172a 100%);z-index:99999;align-items:center;justify-content:center;font-family:'Segoe UI',sans-serif}#lms-login-overlay.active{display:flex}.lms-login-box{background:#fff;border-radius:18px;padding:40px 36px;width:360px;box-shadow:0 20px 60px rgba(0,0,0,.5);text-align:center}.lms-login-box .lms-logo{font-size:2rem;margin-bottom:4px}.lms-login-box h2{font-size:1.25rem;color:#0f172a;margin:0 0 4px}.lms-login-box .lms-subtitle{font-size:.78rem;color:#64748b;margin-bottom:24px}.lms-login-box input{width:100%;box-sizing:border-box;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:8px;font-size:.95rem;margin-bottom:12px;outline:none;transition:border .2s}.lms-login-box input:focus{border-color:#3b82f6}.lms-login-box button{width:100%;padding:12px;background:#3b82f6;color:#fff;border:none;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;margin-top:4px}.lms-login-box button:hover{background:#2563eb}#lms-login-error{color:#ef4444;font-size:.82rem;margin-top:8px;min-height:18px}.lms-login-box .lms-hint{font-size:.73rem;color:#94a3b8;margin-top:14px;line-height:1.5}.lms-page-content{display:none}.lms-page-content.unlocked{display:block}.lms-logout-btn{position:fixed;top:12px;right:16px;z-index:9999;background:#ef4444;color:#fff;border:none;border-radius:6px;padding:6px 14px;font-size:.8rem;cursor:pointer;font-weight:600}.lms-welcome-bar{background:#0f172a;color:#94a3b8;font-size:.78rem;text-align:center;padding:5px;letter-spacing:.5px}@media(max-width:768px){.layout{flex-direction:column}.sidebar{width:100%;height:auto;position:relative}header,nav{padding-left:18px;padding-right:18px}.container{padding:0 14px}}
-</style></head><body>
-<div id="lms-login-overlay" class="active"><div class="lms-login-box"><div class="lms-logo">🎓</div><h2>GJIMT MCA LMS</h2><div class="lms-subtitle">MCA with AI Integration · 2026<br>Please sign in to continue</div><input type="text" id="lms-uid" placeholder="User ID" autocomplete="username"><input type="password" id="lms-pwd" placeholder="Password" autocomplete="current-password" onkeydown="if(event.key==='Enter')lmsDoLogin()"><button onclick="lmsDoLogin()">Sign In →</button><div id="lms-login-error"></div><div class="lms-hint">Students: <b>mca26-ai-01</b> … <b>mca26-ai-10</b><br>Faculty: <b>mca26-fac-manvir</b> | Admin: <b>mca26-admin</b></div></div></div>
-<button class="lms-logout-btn" id="lms-logout-btn" style="display:none" onclick="lmsLogout()">⏻ Sign Out</button><div id="lms-welcome-bar" class="lms-welcome-bar" style="display:none"></div><div id="lms-page-content" class="lms-page-content">
-<header><div><h1>GJIMT AI Lab — MCA Sem 1 LMS</h1><p>MCA with AI Integration · 42-Hour Program · 3 Shadow Projects · Sem 2 Certification Planning · Batch of 10</p></div></header><nav><a href="index.html" class="">🏠 Home</a><a href="calendar.html" class="">📅 42-Hour Calendar</a><a href="projects.html" class="active">📁 Shadow Projects</a><a href="session-guide.html" class="">🗂️ Session Guide</a><a href="mock.html" class="">🔒 Certification (Sem 2)</a><a href="faculty.html" class="">👩‍🏫 Faculty Dashboard</a><a href="upload-guide.html" class="">📤 Upload Guide</a></nav><div class="container"><div class="card"><h2>📁 3 Benchmarked Shadow Projects — MCA Sem 1</h2><p>Each MCA shadow project connects <strong>programming foundations</strong>, <strong>data structures</strong>, <strong>system design</strong>, <strong>AI-assisted debugging</strong>, and <strong>technical documentation</strong>.</p><div style="margin-top:10px"><a class="btn" href="#P1">P1: Google Algorithm Optimization</a><a class="btn" href="#P2">P2: Microsoft System Utility</a><a class="btn" href="#P3">P3: Amazon Data Structure Evaluation</a></div></div><div class="card"><h2>Project Summary</h2><table><tr><th>Project</th><th>Benchmark</th><th>Core Skill</th><th>Final Output</th></tr><tr><td><b>Algorithm Optimization Study</b></td><td>Google</td><td>Compare time and space complexity of alternative algorithms for the same problem.</td><td>Algorithm comparison report, complexity table, optimized code and AI reflection</td></tr><tr><td><b>System Utility Program</b></td><td>Microsoft</td><td>Develop a small utility such as file handler or process monitor with clean logic and documentation.</td><td>Working utility code, user guide, test cases, screenshots and documentation</td></tr><tr><td><b>Data Structure Performance Evaluation</b></td><td>Amazon</td><td>Analyse performance of stacks, queues and linked lists for real-use scenarios.</td><td>Performance tables, scenario mapping, charts, interpretation report and viva notes</td></tr></table></div><div class="card" id="P1"><h2>💻 Project 1: Algorithm Optimization Study <span class="badge badge-proj">Google</span> <span class="badge badge-mock">Weeks 1–4</span></h2><p><strong>Objective:</strong> Compare time and space complexity of alternative algorithms for the same problem.</p><p><strong>AI Tools:</strong> ChatGPT (complexity explanation), GitHub Copilot (refactoring suggestions)</p><div class="phase-box manual"><strong>🟠 Phase 1 — Manual Understanding</strong><ul><li>Understand the problem / system context without using AI as a shortcut.</li><li>Write inputs, outputs, constraints, assumptions and expected result.</li><li>Create Google Drive folder: <b>[UserID]_P1_Algorithm_Optimization_Study</b>.</li></ul></div><div class="phase-box"><strong>🔵 Phase 2 — Design and Implementation</strong><ul><li>Prepare algorithm, pseudocode, flow or module plan.</li><li>Implement code manually first, then use AI only for explanation/refactoring support.</li><li>Record test cases and screenshots.</li></ul></div><div class="phase-box ai"><strong>🟢 Phase 3 — AI-Assisted Review</strong><ul><li>Use ChatGPT/Gemini/Copilot to validate logic and improve clarity.</li><li>Compare AI suggestions with classroom concepts.</li><li>Document what was accepted, rejected and corrected.</li></ul></div><div class="phase-box"><strong>🔵 Phase 4 — Report + Viva</strong><ul><li>Prepare final report, code/output screenshots, AI reflection and viva notes.</li><li>Upload final files through the submission guide.</li></ul></div><h3>Final Deliverables</h3><table><tr><th>File</th><th>Description</th></tr><tr><td>PDF Report</td><td>Problem context, design, implementation, output and interpretation</td></tr><tr><td>Code Files</td><td>Clean source code with comments and proper naming</td></tr><tr><td>Testing Evidence</td><td>Test cases, screenshots, error corrections and performance table where needed</td></tr><tr><td>AI Reflection</td><td>Prompts used, AI output verified, corrections made and ethical use note</td></tr></table></div><div class="card" id="P2"><h2>💻 Project 2: System Utility Program <span class="badge badge-proj">Microsoft</span> <span class="badge badge-mock">Weeks 5–8</span></h2><p><strong>Objective:</strong> Develop a small utility such as file handler or process monitor with clean logic and documentation.</p><p><strong>AI Tools:</strong> Copilot (code completion), ChatGPT (logic validation), Notion AI (documentation)</p><div class="phase-box manual"><strong>🟠 Phase 1 — Manual Understanding</strong><ul><li>Understand the problem / system context without using AI as a shortcut.</li><li>Write inputs, outputs, constraints, assumptions and expected result.</li><li>Create Google Drive folder: <b>[UserID]_P2_System_Utility_Program</b>.</li></ul></div><div class="phase-box"><strong>🔵 Phase 2 — Design and Implementation</strong><ul><li>Prepare algorithm, pseudocode, flow or module plan.</li><li>Implement code manually first, then use AI only for explanation/refactoring support.</li><li>Record test cases and screenshots.</li></ul></div><div class="phase-box ai"><strong>🟢 Phase 3 — AI-Assisted Review</strong><ul><li>Use ChatGPT/Gemini/Copilot to validate logic and improve clarity.</li><li>Compare AI suggestions with classroom concepts.</li><li>Document what was accepted, rejected and corrected.</li></ul></div><div class="phase-box"><strong>🔵 Phase 4 — Report + Viva</strong><ul><li>Prepare final report, code/output screenshots, AI reflection and viva notes.</li><li>Upload final files through the submission guide.</li></ul></div><h3>Final Deliverables</h3><table><tr><th>File</th><th>Description</th></tr><tr><td>PDF Report</td><td>Problem context, design, implementation, output and interpretation</td></tr><tr><td>Code Files</td><td>Clean source code with comments and proper naming</td></tr><tr><td>Testing Evidence</td><td>Test cases, screenshots, error corrections and performance table where needed</td></tr><tr><td>AI Reflection</td><td>Prompts used, AI output verified, corrections made and ethical use note</td></tr></table></div><div class="card" id="P3"><h2>💻 Project 3: Data Structure Performance Evaluation <span class="badge badge-proj">Amazon</span> <span class="badge badge-mock">Weeks 9–12</span></h2><p><strong>Objective:</strong> Analyse performance of stacks, queues and linked lists for real-use scenarios.</p><p><strong>AI Tools:</strong> ChatGPT (scenario mapping), Excel AI (performance tables)</p><div class="phase-box manual"><strong>🟠 Phase 1 — Manual Understanding</strong><ul><li>Understand the problem / system context without using AI as a shortcut.</li><li>Write inputs, outputs, constraints, assumptions and expected result.</li><li>Create Google Drive folder: <b>[UserID]_P3_Data_Structure_Performance_Evaluation</b>.</li></ul></div><div class="phase-box"><strong>🔵 Phase 2 — Design and Implementation</strong><ul><li>Prepare algorithm, pseudocode, flow or module plan.</li><li>Implement code manually first, then use AI only for explanation/refactoring support.</li><li>Record test cases and screenshots.</li></ul></div><div class="phase-box ai"><strong>🟢 Phase 3 — AI-Assisted Review</strong><ul><li>Use ChatGPT/Gemini/Copilot to validate logic and improve clarity.</li><li>Compare AI suggestions with classroom concepts.</li><li>Document what was accepted, rejected and corrected.</li></ul></div><div class="phase-box"><strong>🔵 Phase 4 — Report + Viva</strong><ul><li>Prepare final report, code/output screenshots, AI reflection and viva notes.</li><li>Upload final files through the submission guide.</li></ul></div><h3>Final Deliverables</h3><table><tr><th>File</th><th>Description</th></tr><tr><td>PDF Report</td><td>Problem context, design, implementation, output and interpretation</td></tr><tr><td>Code Files</td><td>Clean source code with comments and proper naming</td></tr><tr><td>Testing Evidence</td><td>Test cases, screenshots, error corrections and performance table where needed</td></tr><tr><td>AI Reflection</td><td>Prompts used, AI output verified, corrections made and ethical use note</td></tr></table></div><div class="card"><h2>Final Portfolio Checklist</h2><table><tr><th>Project</th><th>Portfolio Evidence</th></tr><tr><td>P1 Algorithm Optimization</td><td>Code versions, complexity table, comparison report, AI reflection</td></tr><tr><td>P2 System Utility Program</td><td>Working utility, test screenshots, user guide, documentation</td></tr><tr><td>P3 Data Structure Performance Evaluation</td><td>Implementation, performance table, Excel chart, scenario interpretation</td></tr></table></div></div><footer>© 2026 GJIMT AI Lab · MCA AI Integrated Program · Powered by GitHub Pages</footer></div>
-<script>
-const LMS_USERS={};for(let i=1;i<=10;i++){let id='mca26-ai-'+String(i).padStart(2,'0');LMS_USERS[id]={name:'MCA AI Student '+i,role:'Student',pwd:'mca@2026'}}
-LMS_USERS['mca26-fac-manvir']={name:'Manvir',role:'Faculty',pwd:'faculty@2026'};LMS_USERS['mca26-admin']={name:'Admin',role:'Admin',pwd:'admin@2026'};
-function lmsDoLogin(){const uid=document.getElementById('lms-uid').value.trim().toLowerCase();const pwd=document.getElementById('lms-pwd').value;const err=document.getElementById('lms-login-error');if(LMS_USERS[uid]&&LMS_USERS[uid].pwd===pwd){localStorage.setItem('mca_lms_user',uid);lmsUnlock()}else{err.textContent='Invalid User ID or Password'}}
-function lmsUnlock(){const uid=localStorage.getItem('mca_lms_user');if(!uid||!LMS_USERS[uid])return;document.getElementById('lms-login-overlay').classList.remove('active');document.getElementById('lms-page-content').classList.add('unlocked');document.getElementById('lms-logout-btn').style.display='block';const u=LMS_USERS[uid];document.getElementById('lms-welcome-bar').style.display='block';document.getElementById('lms-welcome-bar').textContent='Signed in as '+u.name+' · '+u.role+' | MCA AI Integrated Program 2026';if(typeof pageAccessControl==='function')pageAccessControl(uid,u.role)}
-function lmsLogout(){localStorage.removeItem('mca_lms_user');location.reload()}
-window.addEventListener('DOMContentLoaded',lmsUnlock);
-function gradeMock(prefix,total){let key={m1:['B','B','C','A','B'],m2:['B','C','A','B','C'],m3:['A','B','C','B','A'],full:['B','A','C','B','D']};let ans=key[prefix]||[];let score=0;for(let i=1;i<=total;i++){let checked=document.querySelector('input[name="'+prefix+'_q'+i+'"]:checked');if(checked&&checked.value===ans[i-1])score++}let box=document.getElementById(prefix+'_result');if(box){box.className='result-box '+(score>=Math.ceil(total*.7)?'pass':'fail');box.textContent='Score: '+score+'/'+total+' — '+(score>=Math.ceil(total*.7)?'Pass':'Revise and retry');}}
+  :root {
+    --bg: #0f1117;
+    --surface: #191c25;
+    --surface2: #21253a;
+    --border: #2a2e42;
+    --accent: #4f8ef7;
+    --accent2: #7c3aed;
+    --green: #22c55e;
+    --orange: #f97316;
+    --blue: #3b82f6;
+    --text: #e2e8f0;
+    --muted: #8892a4;
+    --card-shadow: 0 4px 24px rgba(0,0,0,0.4);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-</script></body></html>
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* ── Top bar ─────────────────────────────────── */
+  .topbar {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .topbar-logo { display: flex; align-items: center; gap: 8px; }
+  .topbar-logo span { font-family: 'Space Mono', monospace; color: var(--accent); font-weight: 700; font-size: 0.95rem; }
+  .topbar-right { display: flex; align-items: center; gap: 12px; }
+  .sign-in-btn {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 14px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  .sign-in-btn:hover { background: #3a7de4; }
+
+  /* ── Nav ─────────────────────────────────────── */
+  nav {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    overflow-x: auto;
+  }
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+    padding: 14px 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  nav a:hover { color: var(--text); }
+  nav a.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+  /* ── Hero ─────────────────────────────────────── */
+  .hero {
+    background: linear-gradient(135deg, #12162a 0%, #1a1040 50%, #0f1117 100%);
+    padding: 48px 24px 36px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 60% 40%, rgba(79,142,247,0.12) 0%, transparent 65%),
+                radial-gradient(ellipse at 20% 80%, rgba(124,58,237,0.10) 0%, transparent 55%);
+    pointer-events: none;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(79,142,247,0.15);
+    border: 1px solid rgba(79,142,247,0.35);
+    color: var(--accent);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    letter-spacing: 0.05em;
+  }
+  .hero h1 {
+    font-size: clamp(1.5rem, 4vw, 2.4rem);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  .hero p { color: var(--muted); font-size: 0.95rem; max-width: 580px; margin: 0 auto 20px; }
+
+  .project-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  .project-tabs a {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .project-tabs a:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+
+  /* ── Framework banner ─────────────────────────── */
+  .framework-banner {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 20px;
+    margin: 28px 24px 0;
+    font-size: 0.85rem;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .framework-banner strong { color: var(--text); }
+
+  /* ── Main ─────────────────────────────────────── */
+  main { max-width: 900px; margin: 0 auto; padding: 32px 24px 64px; }
+
+  /* ── Project Card ─────────────────────────────── */
+  .project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    margin-bottom: 36px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    scroll-margin-top: 80px;
+  }
+  .card-header {
+    padding: 22px 28px 18px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .card-icon {
+    font-size: 2rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .card-meta { flex: 1 }
+  .card-meta h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .card-meta .subtitle { color: var(--muted); font-size: 0.85rem; margin-bottom: 10px; }
+  .card-meta p { font-size: 0.9rem; color: var(--text); }
+
+  .tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-family: 'Space Mono', monospace;
+    padding: 3px 9px;
+    border-radius: 4px;
+    font-weight: 700;
+    margin-right: 6px;
+    margin-bottom: 4px;
+  }
+  .tag-blue { background: rgba(59,130,246,0.15); color: #60a5fa; border: 1px solid rgba(59,130,246,0.25); }
+  .tag-purple { background: rgba(124,58,237,0.15); color: #a78bfa; border: 1px solid rgba(124,58,237,0.25); }
+  .tag-green { background: rgba(34,197,94,0.12); color: #4ade80; border: 1px solid rgba(34,197,94,0.25); }
+
+  .tools-row { padding: 14px 28px; border-bottom: 1px solid var(--border); }
+  .tools-row p { font-size: 0.78rem; color: var(--muted); }
+  .tools-row p strong { color: var(--accent); }
+
+  .card-body { padding: 24px 28px; }
+
+  /* ── Phase legend ─────────────────────────────── */
+  .phase-legend {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 18px;
+  }
+  .phase-legend span { display: flex; align-items: center; gap: 6px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .dot-blue { background: #3b82f6; }
+  .dot-orange { background: #f97316; }
+  .dot-green { background: #22c55e; }
+  .dot-robot { background: #a78bfa; }
+
+  /* ── Phase block ──────────────────────────────── */
+  .phase {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 14px;
+    overflow: hidden;
+  }
+  .phase-head {
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.15s;
+  }
+  .phase-head:hover { filter: brightness(1.1); }
+  .phase-head .phase-icon { font-size: 1rem; }
+  .phase-toggle { margin-left: auto; font-size: 0.75rem; color: var(--muted); transition: transform 0.2s; }
+  .phase.open .phase-toggle { transform: rotate(180deg); }
+
+  .phase-blue .phase-head { background: rgba(59,130,246,0.12); border-left: 3px solid #3b82f6; }
+  .phase-orange .phase-head { background: rgba(249,115,22,0.10); border-left: 3px solid #f97316; }
+  .phase-teal .phase-head { background: rgba(20,184,166,0.10); border-left: 3px solid #14b8a6; }
+  .phase-robot .phase-head { background: rgba(124,58,237,0.12); border-left: 3px solid #7c3aed; }
+
+  .phase-body {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.2s;
+  }
+  .phase.open .phase-body { max-height: 1200px; padding: 14px 18px; }
+  .phase-body ul { list-style: none; padding: 0; }
+  .phase-body ul li {
+    padding: 5px 0;
+    font-size: 0.87rem;
+    color: var(--text);
+    padding-left: 14px;
+    position: relative;
+  }
+  .phase-body ul li::before {
+    content: '→';
+    position: absolute; left: 0;
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+  .phase-body .deliverable {
+    margin-top: 10px;
+    background: rgba(79,142,247,0.08);
+    border: 1px solid rgba(79,142,247,0.2);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 0.82rem;
+    color: #93c5fd;
+  }
+  .phase-body .deliverable strong { color: #bfdbfe; }
+
+  /* ── Rubric table ─────────────────────────────── */
+  .rubric-wrap { margin-top: 20px; }
+  .rubric-wrap h3 { font-size: 0.85rem; color: var(--muted); margin-bottom: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  th { background: var(--surface2); color: var(--muted); font-weight: 600; padding: 8px 12px; text-align: left; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  td { padding: 9px 12px; border-top: 1px solid var(--border); color: var(--text); vertical-align: top; }
+  tr:hover td { background: rgba(255,255,255,0.02); }
+  .weight-badge { font-family: 'Space Mono', monospace; font-weight: 700; color: var(--accent); }
+
+  /* ── Resources & Submit ───────────────────────── */
+  .resources { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .resources a {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.78rem;
+    padding: 5px 12px;
+    border-radius: 6px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .resources a:hover { color: var(--accent); border-color: var(--accent); }
+
+  .submit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #4f8ef7, #7c3aed);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: opacity 0.2s, transform 0.15s;
+  }
+  .submit-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+  /* ── Footer ───────────────────────────────────── */
+  footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--muted);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border);
+  }
+
+  @media (max-width: 600px) {
+    .card-header { flex-direction: column; }
+    nav { gap: 0; }
+    nav a { font-size: 0.78rem; padding: 12px 8px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="topbar-logo">
+    <span>🎓 GJIMT MCA LMS</span>
+    <span style="color:var(--border)">|</span>
+    <span>AI Integrated Program · 2026</span>
+  </div>
+  <div class="topbar-right">
+    <span>Students: <strong style="color:var(--text)">mca26-ai-01 … mca26-ai-10</strong></span>
+    <span>Faculty: <strong style="color:var(--text)">mca26-fac</strong></span>
+    <button class="sign-in-btn">Sign In →</button>
+  </div>
+</div>
+
+<!-- Nav -->
+<nav>
+  <a href="#">🏠 Home</a>
+  <a href="#">📅 6-Week Calendar</a>
+  <a href="#" class="active">📁 Shadow Projects</a>
+  <a href="#">📝 Viva Prep</a>
+  <a href="#">🗂️ Session Guide</a>
+  <a href="#">👩‍🏫 Faculty Dashboard</a>
+  <a href="#">🔑 User Accounts</a>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-badge">GJIMT MCA · AI Integration · Sem 1</div>
+  <h1>📁 Shadow Projects — MCA Sem 1</h1>
+  <p>Real software. Real websites. Responsible AI. Students build industry-grade Python projects guided by a structured weekly framework.</p>
+  <div class="project-tabs">
+    <a href="#P1">P1: Mini Search Engine</a>
+  </div>
+</div>
+
+<div class="framework-banner" style="max-width:900px; margin: 24px auto 0;">
+  Each project follows a <strong>6-week framework: URL Planning → Web Crawling → Baseline Engine → AI-Augmented Ranking → Testing &amp; Comparison → Report &amp; Viva.</strong>
+  Students must complete manual phases before AI tools unlock each week.
+  <span style="margin-left:auto; font-size:0.75rem;">🟠 Manual phases &nbsp; 🤖 AI phases</span>
+</div>
+
+<main>
+
+  <!-- ── P1 ──────────────────────────────────────── -->
+  <div class="project-card" id="P1">
+    <div class="card-header">
+      <div class="card-icon">🔍</div>
+      <div class="card-meta">
+        <div>
+          <span class="tag tag-blue">P1</span>
+          <span class="tag tag-purple">6 Weeks</span>
+          <span class="tag tag-green">Python · BeautifulSoup · CSV</span>
+        </div>
+        <h2>Mini Google Search Engine &nbsp;·&nbsp; Real Websites</h2>
+        <div class="subtitle">GJIMT MCA × AI Integration — Semester 1 Shadow Project 1</div>
+        <p><strong>Objective:</strong> Build a working search engine over 100 real webpages — including a web crawler, metadata database, custom ranking algorithms, and an evidence-based comparison of 5 ranking methods. AI tools are used as governed learning aids, not shortcuts.</p>
+      </div>
+    </div>
+
+    <div class="tools-row">
+      <p><strong>AI Tools:</strong> &nbsp;ChatGPT / Gemini &nbsp;·&nbsp; GitHub Copilot (Week 4 only) &nbsp;·&nbsp; Grammarly AI &nbsp;·&nbsp; Notion AI</p>
+    </div>
+
+    <div class="card-body">
+
+      <div class="phase-legend">
+        <span><span class="dot dot-blue"></span>Context &amp; Planning</span>
+        <span><span class="dot dot-orange"></span>Manual (no AI code generation)</span>
+        <span><span class="dot dot-green"></span>Data &amp; Analysis</span>
+        <span><span class="dot dot-robot"></span>AI Augmentation</span>
+      </div>
+
+      <!-- Week 1 -->
+      <div class="phase phase-blue" id="ph1">
+        <div class="phase-head" onclick="toggle('ph1')">
+          <span class="phase-icon">🌐</span>
+          <span>Week 1 — URL Planning: Building the Index of 100 Real Websites</span>
+          <span class="phase-toggle">▼</span>
+        </div>
+        <div class="phase-body">
+          <ul>
+            <li>Class of 10 students divided by theme — each student finds 10 real, publicly accessible URLs from their assigned topic</li>
+            <li>Themes include: Education &amp; AI, Mohali &amp; Punjab, Technology &amp; Coding, Careers &amp; Business, Lifestyle &amp; Health, Food, Sports, Travel, Science, Arts &amp; Culture</li>
+            <li>Use ChatGPT / Gemini to suggest URL ideas by topic — then verify every URL manually before submission</li>
+            <li>Set up AI diary template using Notion AI — start logging all AI interactions from Day 1</li>
+            <li>Faculty reviews and approves all URLs before crawling; ensures quality and appropriateness</li>
+            <li>No code written yet — Week 1 is entirely planning and data curation</li>
+          </ul>
+          <div class="deliverable"><strong>📄 Deliverable:</strong> <code>url-list.txt</code> — 100 real URLs, one per line, approved by faculty. AI diary started in Notion.</div>
+        </div>
+      </div>
+
+      <!-- Week 2 -->
+      <div class="phase phase-orange" id="ph2">
+        <div class="phase-head" onclick="toggle('ph2')">
+          <span class="phase-icon">🕷️</span>
+          <span>Week 2 — Web Crawling: Collecting Data from Real Websites</span>
+          <span class="phase-toggle">▼</span>
+        </div>
+        <div class="phase-body">
+          <ul>
+            <li>Write <code>crawler.py</code> — a Python script that visits all 100 URLs and extracts structured data</li>
+            <li>For each URL: send HTTP request → receive HTML → parse with BeautifulSoup → extract title, keywords, content (first 500 chars) → write one row to <code>metadata.csv</code></li>
+            <li>Use <code>time.sleep(1.5)</code> between requests — polite crawling, avoids server blocks</li>
+            <li>HTML files are <strong>not</strong> saved to disk — only extracted metadata is retained; full crawl takes ~2–3 minutes</li>
+            <li>After crawling, open <code>metadata.csv</code> in Excel and manually adjust popularity scores (30–90) for each page</li>
+            <li>ChatGPT / Gemini permitted to <em>explain</em> BeautifulSoup methods and debug 403 errors — not to write the crawler</li>
+          </ul>
+          <div class="deliverable"><strong>📄 Deliverable:</strong> <code>metadata.csv</code> — 100 rows with columns: page_id, title, url, category, keywords, content, popularity, updated, links. This is the complete search database for all remaining weeks.</div>
+        </div>
+      </div>
+
+      <!-- Week 3 -->
+      <div class="phase phase-orange" id="ph3">
+        <div class="phase-head" onclick="toggle('ph3')">
+          <span class="phase-icon">🧠</span>
+          <span>Week 3 — Baseline Search Engine: Student-Written From Scratch</span>
+          <span class="phase-toggle">▼</span>
+        </div>
+        <div class="phase-body">
+          <ul>
+            <li><strong>Golden Rule:</strong> Every line of <code>search_engine.py</code> must be typed by the student — no copy-paste from AI, no "write this function for me" prompts</li>
+            <li>Write five functions: <code>load_pages()</code>, <code>tokenise_query()</code>, <code>contains_ignore_case()</code>, <code>score_page()</code>, <code>print_results()</code></li>
+            <li>Scoring formula: Title match = +10 pts · Keywords match = +5 pts · Content match = +2 pts · Popularity ÷ 10 = bonus</li>
+            <li>Program reads <code>metadata.csv</code>, accepts a text query, scores all 100 pages, and displays top 5 results with real clickable URLs</li>
+            <li>AI permitted for explanation only: "Explain what csv.DictReader does" or "Why does sorted() need reverse=True?" — not for code generation</li>
+          </ul>
+          <div class="deliverable"><strong>📄 Deliverable:</strong> <code>search_engine.py</code> — working search engine that reads metadata.csv, scores 100 real pages, and displays ranked results with URLs. Student can explain every single line.</div>
+        </div>
+      </div>
+
+      <!-- Week 4 -->
+      <div class="phase phase-robot" id="ph4">
+        <div class="phase-head" onclick="toggle('ph4')">
+          <span class="phase-icon">🤖</span>
+          <span>Week 4 — AI-Augmented Ranking: 4 Smarter Ranking Methods</span>
+          <span class="phase-toggle">▼</span>
+        </div>
+        <div class="phase-body">
+          <ul>
+            <li>Each student/team implements one of five ranking improvements over the baseline: Weighted Field Ranker · Popularity-Aware Ranker · Keyword Count Ranker · Freshness-Aware Ranker · Domain Trust Ranker</li>
+            <li>GitHub Copilot introduced this week — permitted for refactoring only: better variable names, adding docstrings, splitting long functions, removing repeated code</li>
+            <li>Copilot does <strong>not</strong> write ranking logic — every suggestion must be reviewed, accepted/rejected, and documented in <code>prompts-log.md</code></li>
+          </ul>
+          <div class="deliverable"><strong>📄 Deliverable:</strong> <code>search_engine_v2.py</code> — 5 ranking methods (baseline + 4 improvements). Student can explain what changed in each method and why.</div>
+        </div>
+      </div>
+
+      <!-- Week 5 -->
+      <div class="phase phase-teal" id="ph5">
+        <div class="phase-head" onclick="toggle('ph5')">
+          <span class="phase-icon">📊</span>
+          <span>Week 5 — Testing &amp; Comparison: Evidence-Based Evaluation</span>
+          <span class="phase-toggle">▼</span>
+        </div>
+        <div class="phase-body">
+          <ul>
+            <li>Run 6 standard test queries across all 5 ranking methods: python programming · machine learning AI · punjab tourism chandigarh · data structures algorithms · career internship jobs india · cricket india sports</li>
+            <li>Measure for each method: Relevance (1–5) · Speed (ms via <code>time.perf_counter</code>) · Readability (peer-rated 1–5) · Scalability (conceptual)</li>
+            <li>Record all results in <code>comparison-table.xlsx</code> with real test data — no guesses</li>
+            <li>Form a written opinion: which ranking method works best and why?</li>
+          </ul>
+          <div class="deliverable"><strong>📄 Deliverable:</strong> <code>comparison-table.xlsx</code> — side-by-side results for all 5 methods across 6 standard queries, with relevance, speed, readability, and scalability ratings.</div>
+        </div>
+      </div>
+
+      <!-- Week 6 -->
+      <div class="phase phase-blue" id="ph6">
+        <div class="phase-head" onclick="toggle('ph6')">
+          <span class="phase-icon">🎓</span>
+          <span>Week 6 — Report, Viva &amp; Live Demonstration</span>
+          <span class="phase-toggle">▼</span>
+        </div>
+        <div class="phase-body">
+          <ul>
+            <li>Submit final report (8–10 pages): what was built, how it works, what was found, what was learned</li>
+            <li>Live demo: run the search engine live, type queries, show results with real URLs in terminal</li>
+            <li>Viva: answer 5–8 technical questions from faculty — 5–10 minutes per student</li>
+            <li>Submit complete project folder as ZIP: url-list · crawler · metadata · search engines · comparison table · AI log · report</li>
+            <li>Sample viva questions: "What does your crawler do?" · "How does your scoring function work?" · "What would happen with 10,000 pages?" · "Which AI tools did you use and what exactly for?"</li>
+          </ul>
+          <div class="deliverable"><strong>📄 Deliverable:</strong> <code>report.md</code> + live demo + viva + ZIP submission of all project files.</div>
+        </div>
+      </div>
+
+      <!-- Rubric -->
+      <div class="rubric-wrap">
+        <h3>📊 Evaluation Rubric — 15 Marks</h3>
+        <table>
+          <thead>
+            <tr><th>Component</th><th>Marks</th><th>What Is Evaluated</th><th>Pass Threshold</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Web Crawler (<code>crawler.py</code> + <code>metadata.csv</code>)</td>
+              <td><span class="weight-badge">2</span></td>
+              <td>Working crawler. Student explains requests.get(), BeautifulSoup, time.sleep().</td>
+              <td>Crawler runs and produces valid CSV</td>
+            </tr>
+            <tr>
+              <td>Baseline Search Engine (<code>search_engine.py</code>)</td>
+              <td><span class="weight-badge">3</span></td>
+              <td>Student-written code. Student explains every function during viva.</td>
+              <td>Can explain score_page() and load_pages()</td>
+            </tr>
+            <tr>
+              <td>Improved Ranking (<code>search_engine_v2.py</code>)</td>
+              <td><span class="weight-badge">3</span></td>
+              <td>Meaningful improvement. Student explains what changed and why.</td>
+              <td>Can articulate the specific algorithmic change</td>
+            </tr>
+            <tr>
+              <td>Testing &amp; Comparison Table</td>
+              <td><span class="weight-badge">3</span></td>
+              <td>Evidence-based. Real test data. Genuine analysis of trade-offs.</td>
+              <td>Table has actual numbers, not guesses</td>
+            </tr>
+            <tr>
+              <td>AI Tools Log (<code>prompts-log.md</code>)</td>
+              <td><span class="weight-badge">2</span></td>
+              <td>Diverse, reflective, honest usage across all 6 weeks.</td>
+              <td>Minimum 15 logged interactions</td>
+            </tr>
+            <tr>
+              <td>Viva &amp; Live Demo</td>
+              <td><span class="weight-badge">2</span></td>
+              <td>Live demonstration of working software. Conceptual understanding.</td>
+              <td>Can run program and answer 3 of 5 questions correctly</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Resources -->
+      <div style="margin-top:20px;">
+        <p style="font-size:0.78rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;">📚 Learning Resources</p>
+        <div class="resources">
+          <a href="https://docs.python-requests.org" target="_blank">Python requests docs</a>
+          <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/" target="_blank">BeautifulSoup docs</a>
+          <a href="https://docs.python.org/3/library/csv.html" target="_blank">Python csv module</a>
+          <a href="https://platform.openai.com/docs/guides/prompt-engineering" target="_blank">ChatGPT Prompt Engineering</a>
+          <a href="https://docs.github.com/en/copilot" target="_blank">GitHub Copilot Guide</a>
+          <a href="https://www.notion.so/help/guides/using-notion-ai" target="_blank">Notion AI Guide</a>
+        </div>
+      </div>
+
+      <a href="#" class="submit-btn">📤 Submit P1 on Google Form</a>
+
+    </div><!-- /card-body -->
+  </div><!-- /project-card -->
+
+  <!-- Coming soon placeholder -->
+  <div style="text-align:center; padding:32px; background:var(--surface); border:1px dashed var(--border); border-radius:14px; color:var(--muted);">
+    <div style="font-size:1.8rem;margin-bottom:8px;">🚧</div>
+    <p style="font-size:0.9rem;font-weight:600;color:var(--text);">Shadow Projects P2, P3, P4 — Coming Soon</p>
+    <p style="font-size:0.82rem;margin-top:4px;">Additional projects will be added as the program progresses.</p>
+  </div>
+
+</main>
+
+<footer>
+  © 2026 GJIMT AI Lab · MCA AI Integrated Program · Powered by GitHub Pages
+</footer>
+
+<script>
+  function toggle(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle('open');
+  }
+  // Open Week 1 by default
+  document.getElementById('ph1').classList.add('open');
+</script>
+</body>
+</html>
